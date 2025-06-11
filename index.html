@@ -3,464 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT Learning Center</title>
+    <title>SAT Center - Achieve Your Dream SAT Score</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-left">
-            <div class="logo">SAT Center</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">SAT Center</div>
+            </div>
+            
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#home" data-translate="home">Home</a></li>
+                    <li><a href="#about" data-translate="about">About</a></li>
+                    <li><a href="#teachers" data-translate="teachers">Teachers</a></li>
+                    <li><a href="#contact" data-translate="contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <div class="language-dropdown">
+                    <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
+                        <span id="current-lang">🇺🇸 EN</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu" id="langDropdown">
+                        <button class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</button>
+                        <button class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</button>
+                        <button class="lang-option" onclick="switchLanguage('uz')">🇺🇿 O'zbek</button>
+                    </div>
+                </div>
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" onchange="toggleTheme()">
+                    <label for="theme-toggle" class="theme-toggle-label">
+                        <span class="theme-toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
         </div>
         
-        <div class="nav-center">
-            <ul class="nav-menu">
-                <li><a href="#home" data-translate="home">Home</a></li>
-                <li><a href="#about" data-translate="about">About</a></li>
-                <li><a href="#courses" data-translate="courses">Courses</a></li>
-                <li><a href="#teachers" data-translate="teachers">Teachers</a></li>
-                <li><a href="#contact" data-translate="contact">Contact</a></li>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" data-translate="home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" data-translate="about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#teachers" data-translate="teachers" onclick="closeMobileMenu()">Teachers</a></li>
+                <li><a href="#contact" data-translate="contact" onclick="closeMobileMenu()">Contact</a></li>
             </ul>
-        </div>
-        
-        <div class="nav-right">
-            <div class="faq-badge" onclick="scrollToFAQ()" data-translate="faq">FAQ</div>
-            <div class="language-dropdown">
-                <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
-                    <span id="current-lang">🇺🇸 EN</span>
-                    <span class="dropdown-arrow">▼</span>
-                </button>
-                <div class="lang-dropdown-menu" id="langDropdown">
-                    <button class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</button>
-                    <button class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</button>
-                    <button class="lang-option" onclick="switchLanguage('uz')">🇺🇿 O'zbek</button>
+            <div class="mobile-controls">
+                <div class="language-dropdown">
+                    <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
+                        <span id="current-lang-mobile">🇺🇸 EN</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown-menu" id="langDropdownMobile">
+                        <button class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</button>
+                        <button class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</button>
+                        <button class="lang-option" onclick="switchLanguage('uz')">🇺🇿 O'zbek</button>
+                    </div>
+                </div>
+                <div class="theme-toggle-container">
+                    <input type="checkbox" id="theme-toggle-mobile" class="theme-toggle-checkbox" onchange="toggleTheme()">
+                    <label for="theme-toggle-mobile" class="theme-toggle-label">
+                        <span class="theme-toggle-slider"></span>
+                    </label>
                 </div>
             </div>
-            <div class="theme-toggle-container">
-                <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" onchange="toggleTheme()">
-                <label for="theme-toggle" class="theme-toggle-label">
-                    <span class="theme-toggle-slider"></span>
-                </label>
-            </div>
         </div>
-        
-        <div class="hamburger" onclick="toggleMobileMenu()">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </div>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul class="mobile-nav-menu">
-            <li><a href="#home" data-translate="home" onclick="closeMobileMenu()">Home</a></li>
-            <li><a href="#about" data-translate="about" onclick="closeMobileMenu()">About</a></li>
-            <li><a href="#courses" data-translate="courses" onclick="closeMobileMenu()">Courses</a></li>
-            <li><a href="#teachers" data-translate="teachers" onclick="closeMobileMenu()">Teachers</a></li>
-            <li><a href="#contact" data-translate="contact" onclick="closeMobileMenu()">Contact</a></li>
-        </ul>
-        <div class="mobile-controls">
-            <div class="faq-badge" onclick="scrollToFAQ(); closeMobileMenu()" data-translate="faq">FAQ</div>
-            <div class="language-dropdown">
-                <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
-                    <span id="current-lang-mobile">🇺🇸 EN</span>
-                    <span class="dropdown-arrow">▼</span>
-                </button>
-                <div class="lang-dropdown-menu" id="langDropdownMobile">
-                    <button class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</button>
-                    <button class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</button>
-                    <button class="lang-option" onclick="switchLanguage('uz')">🇺🇿 O'zbek</button>
-                </div>
-            </div>
-            <div class="theme-toggle-container">
-                <input type="checkbox" id="theme-toggle-mobile" class="theme-toggle-checkbox" onchange="toggleTheme()">
-                <label for="theme-toggle-mobile" class="theme-toggle-label">
-                    <span class="theme-toggle-slider"></span>
-                </label>
-            </div>
-        </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-left animate-left">
-                <h1 data-translate="hero-title">Achieve Your Dream SAT Score</h1>
-                <p data-translate="hero-subtitle">Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide.</p>
-                <button class="cta-button" data-translate="register-now">Register Now</button>
+                <h1 data-translate="hero-title">Achieve Your Dream SAT Score & Get Into Top Universities</h1>
+                <p data-translate="hero-subtitle">Master the SAT with our proven methodology and expert guidance. Join thousands of successful students who achieved their target scores.</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" data-translate="start-now">Start Now</button>
+                    <button class="btn-secondary" data-translate="watch-how">Watch How It Works</button>
+                </div>
+                
+                <div class="trust-badge">
+                    <span data-translate="trust-badge">5,000+ students trained • 95% success rate</span>
+                </div>
             </div>
             <div class="hero-right animate-right">
-                <img class="hero-svg" src="svg/undraw_educator_6dgp.svg" alt="A hero graphic (fallback image)">
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Student celebrating SAT success">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-<section id="about" class="about">
-    <div class="about-container">
-        <div class="about-header animate-up">
-            <h2 data-translate="about-title">Why Choose Our Learning Center?</h2>
-            <p data-translate="about-subtitle">Discover what makes us the leading SAT preparation center</p>
-        </div>
-        
-        <div class="about-content">
-            <div class="about-card animate-left">
-                <div class="about-icon">🎯</div>
-                <h3 data-translate="about-card1-title">Proven Results</h3>
-                <p data-translate="about-card1-text">95% of our students improve their SAT scores by an average of 200+ points with our proven methodology.</p>
-            </div>
-            
-            <div class="about-card animate-up">
-                <div class="about-icon">👨‍🏫</div>
-                <h3 data-translate="about-card2-title">Expert Instructors</h3>
-                <p data-translate="about-card2-text">Learn from certified instructors with years of experience and proven track records in SAT preparation.</p>
-            </div>
-            
-            <div class="about-card animate-right">
-                <div class="about-icon">🏆</div>
-                <h3 data-translate="about-card3-title">University Success</h3>
-                <p data-translate="about-card3-text">Our comprehensive admission guidance helps students get into top universities worldwide.</p>
-            </div>
-        </div>
-        
-        <div class="about-stats animate-up">
-            <div class="stat-item">
-                <div class="stat-number">5000+</div>
-                <div class="stat-label" data-translate="stat-students">Students Trained</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">95%</div>
-                <div class="stat-label" data-translate="stat-success">Success Rate</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label" data-translate="stat-improvement">Average Score Improvement</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label" data-translate="stat-universities">Partner Universities</div>
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content animate-up">
+                <div class="about-text">
+                    <h2 data-translate="about-title">What is SAT Center?</h2>
+                    <p data-translate="about-description">SAT Center is a premier test preparation institute dedicated to helping students achieve their highest potential on the SAT exam. Our comprehensive programs combine proven strategies, personalized instruction, and cutting-edge resources to ensure your success.</p>
+                    
+                    <div class="about-for">
+                        <h3 data-translate="who-for-title">Who is this course for?</h3>
+                        <ul class="about-list">
+                            <li data-translate="for-item1">High school students preparing for college admissions</li>
+                            <li data-translate="for-item2">Students aiming for top-tier universities</li>
+                            <li data-translate="for-item3">Anyone looking to improve their SAT scores significantly</li>
+                            <li data-translate="for-item4">Students who want personalized, expert guidance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3 data-translate="get-started">Get Started Today</h3>
+                    <form class="quick-contact-form">
+                        <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
+                        <input type="tel" placeholder="Phone Number" data-translate-placeholder="phone-placeholder" required>
+                        <button type="submit" data-translate="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Teachers Section -->
-<section id="teachers" class="teachers">
-    <div class="teachers-container">
-        <h2 data-translate="teachers-title">Meet Our Expert Teachers</h2>
-        
-        <div class="teacher-list">
+    <section id="teachers" class="teachers">
+        <div class="teachers-container">
+            <h2 class="section-title animate-up" data-translate="teachers-title">Meet Our Expert Teachers</h2>
+            
             <!-- Teacher 1 - Image Left, Info Right -->
-            <div class="teacher-item animate-up">
-                <div class="teacher-image">
+            <div class="teacher-block">
+                <div class="teacher-image animate-slide-left">
                     <img src="img/photo_2025-06-10_17-11-37.jpg" alt="Dr. Sarah Johnson">
                 </div>
-                <div class="teacher-info">
+                <div class="teacher-info animate-slide-right">
                     <h3>Dr. Sarah Johnson</h3>
-                    <p class="teacher-title">SAT Math Expert</p>
-                    <p class="teacher-description">With over 15 years of experience in SAT preparation, Dr. Johnson has helped thousands of students achieve their target math scores. She holds a PhD in Mathematics from MIT and specializes in making complex concepts simple and understandable.</p>
+                    <p class="teacher-title" data-translate="teacher1-title">SAT Math Expert</p>
+                    <p class="teacher-description" data-translate="teacher1-desc">With over 15 years of experience in SAT preparation, Dr. Johnson has helped thousands of students achieve their target math scores. She holds a PhD in Mathematics from MIT and specializes in making complex concepts simple and understandable.</p>
                     <div class="teacher-achievements">
-                        <span class="achievement">✓ 15+ Years Experience</span>
-                        <span class="achievement">✓ PhD Mathematics MIT</span>
-                        <span class="achievement">✓ 3000+ Students Taught</span>
+                        <span class="achievement" data-translate="teacher1-exp">✓ 15+ Years Experience</span>
+                        <span class="achievement" data-translate="teacher1-edu">✓ PhD Mathematics MIT</span>
+                        <span class="achievement" data-translate="teacher1-students">✓ 3000+ Students Taught</span>
                     </div>
                 </div>
             </div>
             
             <!-- Teacher 2 - Info Left, Image Right -->
-            <div class="teacher-item reverse animate-up">
-                <div class="teacher-info">
+            <div class="teacher-block reverse">
+                <div class="teacher-info animate-slide-left">
                     <h3>Prof. Michael Chen</h3>
-                    <p class="teacher-title">English & Writing Specialist</p>
-                    <p class="teacher-description">Professor Chen brings a wealth of knowledge in English literature and writing. His innovative teaching methods have consistently helped students improve their reading comprehension and essay writing skills for the SAT.</p>
+                    <p class="teacher-title" data-translate="teacher2-title">English & Writing Specialist</p>
+                    <p class="teacher-description" data-translate="teacher2-desc">Professor Chen brings a wealth of knowledge in English literature and writing. His innovative teaching methods have consistently helped students improve their reading comprehension and essay writing skills for the SAT.</p>
                     <div class="teacher-achievements">
-                        <span class="achievement">✓ Harvard Graduate</span>
-                        <span class="achievement">✓ Published Author</span>
-                        <span class="achievement">✓ 12+ Years Teaching</span>
+                        <span class="achievement" data-translate="teacher2-edu">✓ Harvard Graduate</span>
+                        <span class="achievement" data-translate="teacher2-author">✓ Published Author</span>
+                        <span class="achievement" data-translate="teacher2-exp">✓ 12+ Years Teaching</span>
                     </div>
                 </div>
-                <div class="teacher-image">
+                <div class="teacher-image animate-slide-right">
                     <img src="img/photo_2025-06-10_17-10-37.jpg" alt="Prof. Michael Chen">
                 </div>
             </div>
             
             <!-- Teacher 3 - Image Left, Info Right -->
-            <div class="teacher-item animate-up">
-                <div class="teacher-image">
+            <div class="teacher-block">
+                <div class="teacher-image animate-slide-left">
                     <img src="img/IMG_1851.jpg" alt="Dr. Emily Rodriguez">
                 </div>
-                <div class="teacher-info">
+                <div class="teacher-info animate-slide-right">
                     <h3>Dr. Emily Rodriguez</h3>
-                    <p class="teacher-title">College Admission Counselor</p>
-                    <p class="teacher-description">Dr. Rodriguez specializes in college admissions and has guided hundreds of students through the complex process of university applications. Her expertise extends to scholarship applications and interview preparation.</p>
+                    <p class="teacher-title" data-translate="teacher3-title">College Admission Counselor</p>
+                    <p class="teacher-description" data-translate="teacher3-desc">Dr. Rodriguez specializes in college admissions and has guided hundreds of students through the complex process of university applications. Her expertise extends to scholarship applications and interview preparation.</p>
                     <div class="teacher-achievements">
-                        <span class="achievement">✓ Former Admissions Officer</span>
-                        <span class="achievement">✓ 500+ Successful Applications</span>
-                        <span class="achievement">✓ Scholarship Expert</span>
+                        <span class="achievement" data-translate="teacher3-officer">✓ Former Admissions Officer</span>
+                        <span class="achievement" data-translate="teacher3-apps">✓ 500+ Successful Applications</span>
+                        <span class="achievement" data-translate="teacher3-scholar">✓ Scholarship Expert</span>
                     </div>
                 </div>
             </div>
             
             <!-- Teacher 4 - Info Left, Image Right -->
-            <div class="teacher-item reverse animate-up">
-                <div class="teacher-info">
+            <div class="teacher-block reverse">
+                <div class="teacher-info animate-slide-left">
                     <h3>James Wilson</h3>
-                    <p class="teacher-title">SAT Strategy Coach</p>
-                    <p class="teacher-description">James focuses on test-taking strategies and time management techniques. His systematic approach to SAT preparation has helped students maximize their potential and achieve significant score improvements.</p>
+                    <p class="teacher-title" data-translate="teacher4-title">SAT Strategy Coach</p>
+                    <p class="teacher-description" data-translate="teacher4-desc">James focuses on test-taking strategies and time management techniques. His systematic approach to SAT preparation has helped students maximize their potential and achieve significant score improvements.</p>
                     <div class="teacher-achievements">
-                        <span class="achievement">✓ Perfect SAT Scorer</span>
-                        <span class="achievement">✓ Strategy Specialist</span>
-                        <span class="achievement">✓ 8+ Years Coaching</span>
+                        <span class="achievement" data-translate="teacher4-perfect">✓ Perfect SAT Scorer</span>
+                        <span class="achievement" data-translate="teacher4-strategy">✓ Strategy Specialist</span>
+                        <span class="achievement" data-translate="teacher4-exp">✓ 8+ Years Coaching</span>
                     </div>
                 </div>
-                <div class="teacher-image">
+                <div class="teacher-image animate-slide-right">
                     <img src="img/IMG_0913.PNG" alt="James Wilson">
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <div class="courses-container">
-            <h2 data-translate="courses-title">Choose Your Perfect Course</h2>
-            <div class="courses-grid">
-                <div class="course-card basic animate-up">
-                    <h3 data-translate="course-english">SAT English Course</h3>
-                    <div class="price">$299</div>
-                    <ul>
-                        <li data-translate="english-feature1">✓ Reading comprehension</li>
-                        <li data-translate="english-feature2">✓ Writing & Language</li>
-                        <li data-translate="english-feature3">✓ Essay preparation</li>
-                        <li data-translate="english-feature4">✓ 20 practice tests</li>
-                    </ul>
-                    <button class="course-btn" data-translate="choose-plan">Choose Plan</button>
-                </div>
-                
-                <div class="course-card premium animate-up">
-                    <div class="badge" data-translate="popular">Most Popular</div>
-                    <h3 data-translate="course-full">Full SAT Course</h3>
-                    <div class="price">$499</div>
-                    <ul>
-                        <li data-translate="full-feature1">✓ Complete SAT preparation</li>
-                        <li data-translate="full-feature2">✓ Math & English sections</li>
-                        <li data-translate="full-feature3">✓ 50+ practice tests</li>
-                        <li data-translate="full-feature4">✓ Personal tutor support</li>
-                        <li data-translate="full-feature5">✓ Score guarantee</li>
-                    </ul>
-                    <button class="course-btn" data-translate="choose-plan">Choose Plan</button>
-                </div>
-                
-                <div class="course-card ultimate animate-up">
-                    <div class="badge gold" data-translate="best-value">Best Value</div>
-                    <h3 data-translate="course-ultimate">Full SAT + Admission Course</h3>
-                    <div class="price">$799</div>
-                    <ul>
-                        <li data-translate="ultimate-feature1">✓ Everything in Full SAT</li>
-                        <li data-translate="ultimate-feature2">✓ University admission guidance</li>
-                        <li data-translate="ultimate-feature3">✓ Essay review & editing</li>
-                        <li data-translate="ultimate-feature4">✓ Interview preparation</li>
-                        <li data-translate="ultimate-feature5">✓ Scholarship assistance</li>
-                        <li data-translate="ultimate-feature6">✓ 1-on-1 counseling</li>
-                    </ul>
-                    <button class="course-btn" data-translate="choose-plan">Choose Plan</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="faq-container">
-            <h2 data-translate="faq-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-column">
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q1">How long does the course take?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a1">Our courses typically run for 12-16 weeks, with flexible scheduling options to fit your needs.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q2">What is your success rate?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a2">95% of our students improve their SAT scores by an average of 200+ points.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q3">Do you offer online classes?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a3">Yes, we offer both in-person and online classes with the same quality instruction.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-column">
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q4">What materials are included?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a4">All study materials, practice tests, and digital resources are included in your course fee.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q5">Can I get a refund?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a5">We offer a 30-day money-back guarantee if you're not satisfied with our program.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item animate-up">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <span data-translate="faq-q6">Do you help with college applications?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-translate="faq-a6">Our premium courses include comprehensive college admission guidance and application support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collaborators Section -->
-    <section class="collaborators">
-        <div class="collaborators-container">
-            <h2 data-translate="collaborators-title">Our University Partners</h2>
-            <div class="logo-slider">
-                <div class="logo-track">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Harvard University">
-                    <img src="/placeholder.svg?height=60&width=120" alt="MIT">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Stanford">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Yale">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Princeton">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Columbia">
-                    <!-- Duplicate for seamless loop -->
-                    <img src="/placeholder.svg?height=60&width=120" alt="Harvard University">
-                    <img src="/placeholder.svg?height=60&width=120" alt="MIT">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Stanford">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Yale">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Princeton">
-                    <img src="/placeholder.svg?height=60&width=120" alt="Columbia">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <div class="contact-left animate-left">
-                <h2 data-translate="contact-title">Get In Touch</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong data-translate="email">Email:</strong>
-                        <span>info@satlearningcenter.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong data-translate="phone">Phone:</strong>
-                        <span>+1 (555) 123-4567</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong data-translate="address">Address:</strong>
-                        <span>123 Education St, Learning City, LC 12345</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contact-right animate-right">
-                <form class="contact-form">
-    <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
-    <input type="email" placeholder="Your Email" data-translate-placeholder="email-placeholder" required>
-    <input type="tel" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder" required>
-    <textarea placeholder="Your Message" data-translate-placeholder="message-placeholder" rows="5" required></textarea>
-    <button type="submit" data-translate="send-message">Send Message</button>
-</form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>SAT Learning Center</h3>
-                <p data-translate="footer-description">Empowering students to achieve their dreams through exceptional SAT preparation and university admission guidance.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">📘</a>
-                    <a href="#" aria-label="Twitter">🐦</a>
-                    <a href="#" aria-label="Instagram">📷</a>
-                    <a href="#" aria-label="LinkedIn">💼</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAT Center</h3>
+                    <p data-translate="footer-description">Empowering students to achieve their dreams through exceptional SAT preparation and university admission guidance.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer-company">Company</h4>
+                    <ul>
+                        <li><a href="#" data-translate="footer-about">About Us</a></li>
+                        <li><a href="#" data-translate="footer-teachers-link">Our Teachers</a></li>
+                        <li><a href="#" data-translate="footer-success">Success Stories</a></li>
+                        <li><a href="#" data-translate="footer-blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact-info">Contact Info</h4>
+                    <div class="contact-details">
+                        <p><strong data-translate="email">Email:</strong> info@satcenter.com</p>
+                        <p><strong data-translate="phone">Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong data-translate="address">Address:</strong> 123 Education St, Learning City, LC 12345</p>
+                        <p><strong data-translate="hours">Hours:</strong> Mon-Fri 9AM-6PM</p>
+                    </div>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h4 data-translate="footer-courses">Courses</h4>
-                <ul>
-                    <li><a href="#" data-translate="footer-sat-english">SAT English</a></li>
-                    <li><a href="#" data-translate="footer-sat-math">SAT Math</a></li>
-                    <li><a href="#" data-translate="footer-full-sat">Full SAT Prep</a></li>
-                    <li><a href="#" data-translate="footer-admission">Admission Guidance</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4 data-translate="footer-company">Company</h4>
-                <ul>
-                    <li><a href="#" data-translate="footer-about">About Us</a></li>
-                    <li><a href="#" data-translate="footer-teachers-link">Our Teachers</a></li>
-                    <li><a href="#" data-translate="footer-success">Success Stories</a></li>
-                    <li><a href="#" data-translate="footer-blog">Blog</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4 data-translate="footer-contact-info">Contact Info</h4>
-                <div class="contact-details">
-                    <p><strong data-translate="email">Email:</strong> info@satlearningcenter.com</p>
-                    <p><strong data-translate="phone">Phone:</strong> +1 (555) 123-4567</p>
-                    <p><strong data-translate="address">Address:</strong> 123 Education St, Learning City, LC 12345</p>
-                    <p><strong data-translate="hours">Hours:</strong> Mon-Fri 9AM-6PM</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p>&copy; 2024 SAT Learning Center. <span data-translate="rights">All rights reserved.</span></p>
-                <div class="footer-links">
-                    <a href="#" data-translate="privacy">Privacy Policy</a>
-                    <a href="#" data-translate="terms">Terms of Service</a>
-                    <a href="#" data-translate="support">Support</a>
-                    <a href="#" data-translate="sitemap">Sitemap</a>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 SAT Center. <span data-translate="rights">All rights reserved.</span></p>
+                    <div class="footer-links">
+                        <a href="#" data-translate="privacy">Privacy Policy</a>
+                        <a href="#" data-translate="terms">Terms of Service</a>
+                        <a href="#" data-translate="support">Support</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
