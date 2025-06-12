@@ -40,8 +40,8 @@ const translations = {
     "trust-badge": "5,000+ students trained • 95% success rate",
 
     // About Section
-    "about-title": "What is SAT Center?",
-    "about-description": "SAT Center is a premier test preparation institute dedicated to helping students achieve their highest potential on the SAT exam. Our comprehensive programs combine proven strategies, personalized instruction, and cutting-edge resources to ensure your success.",
+    "about-title": "What is Maqsadly?",
+    "about-description": "Maqsadly is a premier test preparation institute dedicated to helping students achieve their highest potential on the SAT exam. Our comprehensive programs combine proven strategies, personalized instruction, and cutting-edge resources to ensure your success.",
     "who-for-title": "Who is this course for?",
     "for-item1": "High school students preparing for college admissions",
     "for-item2": "Students aiming for top-tier universities",
@@ -111,8 +111,8 @@ const translations = {
     "trust-badge": "5,000+ обученных студентов • 95% успешности",
 
     // About Section
-    "about-title": "Что такое SAT Center?",
-    "about-description": "SAT Center - это ведущий институт подготовки к тестам, посвященный помощи студентам в достижении их наивысшего потенциала на экзамене SAT. Наши комплексные программы сочетают проверенные стратегии, персонализированное обучение и передовые ресурсы для обеспечения вашего успеха.",
+    "about-title": "Что такое Maqsadly?",
+    "about-description": "Maqsadly - это ведущий институт подготовки к тестам, посвященный помощи студентам в достижении их наивысшего потенциала на экзамене SAT. Наши комплексные программы сочетают проверенные стратегии, персонализированное обучение и передовые ресурсы для обеспечения вашего успеха.",
     "who-for-title": "Для кого этот курс?",
     "for-item1": "Старшеклассники, готовящиеся к поступлению в колледж",
     "for-item2": "Студенты, нацеленные на университеты высшего уровня",
@@ -182,8 +182,8 @@ const translations = {
     "trust-badge": "5,000+ o'qitilgan talabalar • 95% muvaffaqiyat darajasi",
 
     // About Section
-    "about-title": "SAT Center nima?",
-    "about-description": "SAT Center - bu talabalarga SAT imtihonida eng yuqori salohiyatlariga erishishda yordam berishga bag'ishlangan yetakchi test tayyorlash instituti. Bizning keng qamrovli dasturlarimiz isbotlangan strategiyalar, shaxsiylashtirilgan ta'lim va ilg'or resurslarni birlashtiradi.",
+    "about-title": "Maqsadly nima?",
+    "about-description": "Maqsadly - bu talabalarga SAT imtihonida eng yuqori salohiyatlariga erishishda yordam berishga bag'ishlangan yetakchi test tayyorlash instituti. Bizning keng qamrovli dasturlarimiz isbotlangan strategiyalar, shaxsiylashtirilgan ta'lim va ilg'or resurslarni birlashtiradi.",
     "who-for-title": "Bu kurs kim uchun?",
     "for-item1": "Kollej qabuliga tayyorlanayotgan o'rta maktab o'quvchilari",
     "for-item2": "Yuqori darajadagi universitetlarni maqsad qilgan talabalar",

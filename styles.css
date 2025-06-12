@@ -184,7 +184,7 @@ body {
 
 /* Update FAQ badge styles */
 .nav-right .faq-badge {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: #b88746;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
@@ -301,10 +301,10 @@ body {
   display: inline-block;
   width: 60px;
   height: 30px;
-  background: var(--border-color);
+  background: #D1D5DB !important;
   border-radius: 15px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none;
 }
 
 .theme-toggle-slider {
@@ -315,7 +315,7 @@ body {
   height: 24px;
   background: white;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
@@ -323,59 +323,20 @@ body {
   font-size: 1.2rem;
 }
 
-.theme-toggle-label .sun-icon,
-.theme-toggle-label .moon-icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  transition: opacity 0.3s;
-}
-
-.theme-toggle-label .sun-icon {
-  left: 8px;
-  color: #fbbf24;
-  opacity: 1;
-}
-
-.theme-toggle-label .moon-icon {
-  right: 8px;
-  color: #a29bfe;
-  opacity: 0;
-}
-
-.theme-toggle-checkbox:checked + .theme-toggle-label .sun-icon {
-  opacity: 0;
-}
-
-.theme-toggle-checkbox:checked + .theme-toggle-label .moon-icon {
-  opacity: 1;
-}
-
 .theme-toggle-checkbox:checked + .theme-toggle-label {
-  background: var(--primary-color);
+  background: #072c50;
+  border: none;
 }
 
 .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-slider {
   transform: translateX(30px);
-}
-
-[data-theme="dark"] .theme-toggle-slider {
-  background: var(--accent-color);
+  background: #b88746;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-[data-theme="dark"] .sun-icon {
-  display: none;
-}
-
-[data-theme="light"] .moon-icon,
-.moon-icon {
-  display: none;
-}
-
-[data-theme="dark"] .moon-icon {
-  display: inline;
+[data-theme="dark"] .theme-toggle-label {
+  background: #D1D5DB !important;
+  border: none;
 }
 
 .logo {
@@ -1389,74 +1350,22 @@ body {
     border: none;
   }
   .mobile-controls .theme-toggle-label {
-    background: var(--border-color);
+    background: #D1D5DB;
     border-radius: 15px;
-    border: 2px solid var(--primary-color);
+    border: none;
   }
   [data-theme="dark"] .mobile-controls .theme-toggle-label {
-    background: var(--border-color);
-    border: 2px solid var(--primary-color);
+    background: #D1D5DB;
+    border: none;
   }
   .mobile-controls .theme-toggle-slider {
-    background: #fff;
+    background: white;
   }
-  /* Language dropdown in mobile */
-  .mobile-controls .language-dropdown .lang-dropdown-btn {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease-in-out;
+  .mobile-controls .theme-toggle-checkbox:checked + .mobile-controls .theme-toggle-label {
+    background: #072c50;
   }
-  .mobile-controls .language-dropdown .lang-dropdown-btn:hover {
-    background: var(--border-color);
-  }
-  .mobile-controls .language-dropdown .lang-dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: var(--shadow-lg);
-    min-width: 150px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-  }
-  .mobile-controls .language-dropdown.active .lang-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .mobile-controls .language-dropdown .lang-option {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .mobile-controls .language-dropdown .lang-option:hover {
-    background: var(--bg-secondary);
-  }
-  .mobile-controls .language-dropdown .lang-option:first-child {
-    border-radius: 8px 8px 0 0;
-  }
-  .mobile-controls .language-dropdown .lang-option:last-child {
-    border-radius: 0 0 8px 8px;
+  .mobile-controls .theme-toggle-checkbox:checked + .mobile-controls .theme-toggle-label .theme-toggle-slider {
+    background: #fdf5a6;
   }
 }
 
@@ -1696,4 +1605,338 @@ body {
   border-color: #b88746 !important;
   box-shadow: 0 0 0 3px #b88746;
   outline: none;
+}
+
+.mission-section {
+  padding: 6rem 2rem 4rem;
+  background: var(--bg-color);
+}
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.mission-left h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+[data-theme="dark"] .mission-left h2 {
+  color: #fff;
+}
+.mission-left p {
+  color: var(--text-light);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+.mission-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mission-image {
+  width: 440px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .mission-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .mission-left {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .mission-right {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .mission-image {
+    width: 95vw;
+    height: 220px;
+    max-width: 95vw;
+  }
+}
+@media (max-width: 600px) {
+  .mission-section {
+    padding: 2rem 0.5rem 1rem;
+  }
+  .mission-image {
+    width: 100vw;
+    height: 160px;
+    max-width: 100vw;
+  }
+  .mission-left h2 {
+    font-size: 1.5rem;
+  }
+  .mission-left p {
+    font-size: 1rem;
+  }
+}
+
+[data-theme="dark"] .mission-left h2,
+[data-theme="dark"] .mission-left p {
+  color: #fff !important;
+}
+
+.why-different-section {
+  padding: 6rem 2rem 4rem;
+  background: var(--bg-secondary);
+}
+.why-different-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.why-different-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+[data-theme="dark"] .why-different-container h2 {
+  color: #fff;
+}
+.why-different-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+.why-card {
+  position: relative;
+  background: var(--bg-color);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 520px;
+  padding: 2.2rem 2.5rem 2.2rem 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 2px solid var(--border-color);
+}
+.why-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px) scale(1.03);
+  border-color: var(--secondary-color);
+}
+.why-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+.why-card-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+.why-card-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.why-card-icon {
+  margin-bottom: 0.7rem;
+}
+.why-card-icon svg {
+  display: block;
+  width: 2.2em;
+  height: 2.2em;
+  stroke: url(#gold-gradient);
+}
+/* Gold gradient definition for icons */
+.why-different-section svg defs {
+  /* nothing here, just for structure */
+}
+.why-different-section .why-card-icon svg {
+  stroke: url(#gold-gradient);
+}
+.why-different-section .why-card-icon svg linearGradient {
+  /* fallback for browsers that support it */
+}
+/* Fallback for browsers that don't support SVG gradients */
+.why-card-icon svg:not([stroke*='url']) {
+  stroke: #b88746;
+}
+.why-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+.why-card-desc {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+[data-theme="dark"] .why-card {
+  background: var(--bg-secondary);
+  border-color: #b88746;
+}
+[data-theme="dark"] .why-card-title {
+  color: #fff;
+}
+[data-theme="dark"] .why-card-desc {
+  color: #fff;
+}
+[data-theme="dark"] .why-card-number {
+  color: #b88746;
+}
+@media (max-width: 1100px) {
+  .why-different-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .why-card {
+    max-width: 95vw;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .why-different-section {
+    padding: 2rem 0.5rem 1rem;
+  }
+  .why-card {
+    min-height: 220px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .why-different-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.why-card-bg-light {
+  display: block;
+}
+.why-card-bg-dark {
+  display: none;
+}
+[data-theme="dark"] .why-card-bg-light {
+  display: none;
+}
+[data-theme="dark"] .why-card-bg-dark {
+  display: block;
+}
+
+.problems-section {
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+}
+.problems-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.problems-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: 800;
+}
+.problems-header p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+}
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.chat-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.chat-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 18px;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  max-width: 90%;
+}
+.chat-bubble.parent {
+  background: #f5f8fa;
+  color: var(--text-color);
+}
+.chat-bubble.assistant {
+  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(184, 135, 70, 0.08);
+}
+.chat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: var(--primary-color);
+}
+.chat-bubble.assistant .chat-label {
+  color: #fff;
+  text-shadow: none;
+}
+.chat-icon {
+  font-size: 1.5rem;
+  margin-right: 0.7rem;
+}
+@media (max-width: 900px) {
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .problems-section {
+    padding: 2rem 0.5rem;
+  }
+  .chat-card {
+    padding: 1rem;
+  }
+  .problems-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+[data-theme="dark"] .chat-bubble.parent {
+  background: var(--bg-secondary);
+  color: #fff;
+}
+
+[data-theme="dark"] .chat-bubble.assistant {
+  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  color: #fff;
+}
+
+[data-theme="dark"] .chat-label {
+  color: #fff;
+}
+
+[data-theme="dark"] .chat-bubble.assistant .chat-label {
+  color: #fff;
 }
