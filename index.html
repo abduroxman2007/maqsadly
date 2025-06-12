@@ -64,7 +64,7 @@
         <div class="mobile-controls">
             <div class="faq-badge" onclick="scrollToFAQ(); closeMobileMenu()" data-translate="faq">FAQ</div>
             <div class="language-dropdown">
-                <button class="lang-dropdown-btn" onclick="toggleLanguageDropdown()">
+                <button class="lang-dropdown-btn" onclick="toggleLanguageDropdownMobile()">
                     <span id="current-lang-mobile">🇺🇸 EN</span>
                     <span class="dropdown-arrow">▼</span>
                 </button>
@@ -87,13 +87,22 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-left animate-left">
-                <h1 data-translate="hero-title">Achieve Your Dream SAT Score</h1>
-                <p data-translate="hero-subtitle">Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide.</p>
-                <button class="cta-button" data-translate="register-now">Register Now</button>
+            <div class="hero-left">
+                <h1>
+                    <span class="hero-accent">Achieve</span> Your Dream SAT Score & Get Into <span class="hero-accent">Top</span> Universities
+                </h1>
+                <p>Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide with our proven methodology.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" data-translate="start-now">Start Now</button>
+                    <button class="cta-button secondary" data-translate="watch-how">Watch How It Works</button>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-badge-icon">✓</span>
+                    <span>5,000+ students trained • 95% success rate</span>
+                </div>
             </div>
-            <div class="hero-right animate-right">
-                <img class="hero-svg" src="svg/undraw_educator_6dgp.svg" alt="A hero graphic (fallback image)">
+            <div class="hero-right">
+                <img class="hero-svg" src="svg/undraw_educator_6dgp.svg" alt="Student achieving success">
             </div>
         </div>
     </section>
@@ -101,47 +110,31 @@
     <!-- About Us Section -->
 <section id="about" class="about">
     <div class="about-container">
-        <div class="about-header animate-up">
+        <div class="about-header">
             <h2 data-translate="about-title">Why Choose Our Learning Center?</h2>
             <p data-translate="about-subtitle">Discover what makes us the leading SAT preparation center</p>
         </div>
         
         <div class="about-content">
-            <div class="about-card animate-left">
-                <div class="about-icon">🎯</div>
-                <h3 data-translate="about-card1-title">Proven Results</h3>
-                <p data-translate="about-card1-text">95% of our students improve their SAT scores by an average of 200+ points with our proven methodology.</p>
+            <div class="about-text">
+                <p>SAT Center is dedicated to helping students achieve their academic goals through comprehensive SAT preparation. Our proven methodology combines expert instruction, personalized attention, and cutting-edge resources to ensure your success.</p>
+                
+                <h3>Who is this course for?</h3>
+                <ul>
+                    <li>High school students preparing for college admissions</li>
+                    <li>Students aiming for top universities</li>
+                    <li>Those seeking to improve their SAT scores</li>
+                    <li>International students applying to US universities</li>
+                </ul>
             </div>
             
-            <div class="about-card animate-up">
-                <div class="about-icon">👨‍🏫</div>
-                <h3 data-translate="about-card2-title">Expert Instructors</h3>
-                <p data-translate="about-card2-text">Learn from certified instructors with years of experience and proven track records in SAT preparation.</p>
-            </div>
-            
-            <div class="about-card animate-right">
-                <div class="about-icon">🏆</div>
-                <h3 data-translate="about-card3-title">University Success</h3>
-                <p data-translate="about-card3-text">Our comprehensive admission guidance helps students get into top universities worldwide.</p>
-            </div>
-        </div>
-        
-        <div class="about-stats animate-up">
-            <div class="stat-item">
-                <div class="stat-number">5000+</div>
-                <div class="stat-label" data-translate="stat-students">Students Trained</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">95%</div>
-                <div class="stat-label" data-translate="stat-success">Success Rate</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">200+</div>
-                <div class="stat-label" data-translate="stat-improvement">Average Score Improvement</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label" data-translate="stat-universities">Partner Universities</div>
+            <div class="about-form">
+                <h3>Get Started Today</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <button type="submit">Start Your Journey</button>
+                </form>
             </div>
         </div>
     </div>
@@ -154,11 +147,11 @@
         
         <div class="teacher-list">
             <!-- Teacher 1 - Image Left, Info Right -->
-            <div class="teacher-item animate-up">
-                <div class="teacher-image">
+            <div class="teacher-item">
+                <div class="teacher-image animate-left">
                     <img src="img/photo_2025-06-10_17-11-37.jpg" alt="Dr. Sarah Johnson">
                 </div>
-                <div class="teacher-info">
+                <div class="teacher-info animate-right">
                     <h3>Dr. Sarah Johnson</h3>
                     <p class="teacher-title">SAT Math Expert</p>
                     <p class="teacher-description">With over 15 years of experience in SAT preparation, Dr. Johnson has helped thousands of students achieve their target math scores. She holds a PhD in Mathematics from MIT and specializes in making complex concepts simple and understandable.</p>
@@ -170,9 +163,9 @@
                 </div>
             </div>
             
-            <!-- Teacher 2 - Info Left, Image Right -->
-            <div class="teacher-item reverse animate-up">
-                <div class="teacher-info">
+            <!-- Teacher 2 - Image Right, Info Left -->
+            <div class="teacher-item">
+                <div class="teacher-info animate-left">
                     <h3>Prof. Michael Chen</h3>
                     <p class="teacher-title">English & Writing Specialist</p>
                     <p class="teacher-description">Professor Chen brings a wealth of knowledge in English literature and writing. His innovative teaching methods have consistently helped students improve their reading comprehension and essay writing skills for the SAT.</p>
@@ -182,17 +175,17 @@
                         <span class="achievement">✓ 12+ Years Teaching</span>
                     </div>
                 </div>
-                <div class="teacher-image">
+                <div class="teacher-image animate-right">
                     <img src="img/photo_2025-06-10_17-10-37.jpg" alt="Prof. Michael Chen">
                 </div>
             </div>
             
             <!-- Teacher 3 - Image Left, Info Right -->
-            <div class="teacher-item animate-up">
-                <div class="teacher-image">
+            <div class="teacher-item">
+                <div class="teacher-image animate-left">
                     <img src="img/IMG_1851.jpg" alt="Dr. Emily Rodriguez">
                 </div>
-                <div class="teacher-info">
+                <div class="teacher-info animate-right">
                     <h3>Dr. Emily Rodriguez</h3>
                     <p class="teacher-title">College Admission Counselor</p>
                     <p class="teacher-description">Dr. Rodriguez specializes in college admissions and has guided hundreds of students through the complex process of university applications. Her expertise extends to scholarship applications and interview preparation.</p>
@@ -204,9 +197,9 @@
                 </div>
             </div>
             
-            <!-- Teacher 4 - Info Left, Image Right -->
-            <div class="teacher-item reverse animate-up">
-                <div class="teacher-info">
+            <!-- Teacher 4 - Image Right, Info Left -->
+            <div class="teacher-item">
+                <div class="teacher-info animate-left">
                     <h3>James Wilson</h3>
                     <p class="teacher-title">SAT Strategy Coach</p>
                     <p class="teacher-description">James focuses on test-taking strategies and time management techniques. His systematic approach to SAT preparation has helped students maximize their potential and achieve significant score improvements.</p>
@@ -216,7 +209,7 @@
                         <span class="achievement">✓ 8+ Years Coaching</span>
                     </div>
                 </div>
-                <div class="teacher-image">
+                <div class="teacher-image animate-right">
                     <img src="img/IMG_0913.PNG" alt="James Wilson">
                 </div>
             </div>
@@ -383,21 +376,15 @@
                         <strong data-translate="phone">Phone:</strong>
                         <span>+1 (555) 123-4567</span>
                     </div>
-                    <div class="contact-item">
-                        <strong data-translate="address">Address:</strong>
-                        <span>123 Education St, Learning City, LC 12345</span>
-                    </div>
                 </div>
             </div>
             
             <div class="contact-right animate-right">
                 <form class="contact-form">
-    <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
-    <input type="email" placeholder="Your Email" data-translate-placeholder="email-placeholder" required>
-    <input type="tel" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder" required>
-    <textarea placeholder="Your Message" data-translate-placeholder="message-placeholder" rows="5" required></textarea>
-    <button type="submit" data-translate="send-message">Send Message</button>
-</form>
+                    <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
+                    <input type="tel" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder" required>
+                    <button type="submit" data-translate="send-message">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -442,7 +429,6 @@
                 <div class="contact-details">
                     <p><strong data-translate="email">Email:</strong> info@satlearningcenter.com</p>
                     <p><strong data-translate="phone">Phone:</strong> +1 (555) 123-4567</p>
-                    <p><strong data-translate="address">Address:</strong> 123 Education St, Learning City, LC 12345</p>
                     <p><strong data-translate="hours">Hours:</strong> Mon-Fri 9AM-6PM</p>
                 </div>
             </div>

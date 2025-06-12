@@ -438,10 +438,10 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar")
   if (window.scrollY > 50) {
-    navbar.style.background = "rgba(255, 255, 255, 0.98)"
+    navbar.style.background = "var(--bg-color)"
     navbar.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)"
   } else {
-    navbar.style.background = "rgba(255, 255, 255, 0.95)"
+    navbar.style.background = "var(--bg-color)"
     navbar.style.boxShadow = "none"
   }
 })
@@ -457,3 +457,24 @@ document.addEventListener("click", (e) => {
     closeMobileMenu()
   }
 })
+
+function toggleFAQ(element) {
+  const faqItem = element.closest('.faq-item');
+  const allFaqs = document.querySelectorAll('.faq-item');
+  allFaqs.forEach(item => {
+    if (item !== faqItem) item.classList.remove('active');
+  });
+  faqItem.classList.toggle('active');
+}
+
+function toggleLanguageDropdownMobile() {
+  const dropdown = document.querySelector('.mobile-controls .language-dropdown');
+  dropdown.classList.toggle('active');
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function closeDropdown(e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+      document.removeEventListener('click', closeDropdown);
+    }
+  });
+}
