@@ -387,6 +387,38 @@ function setupTeacherAnimations() {
   })
 }
 
+// Timeline animations
+function setupTimelineAnimations() {
+    const timeline = document.querySelector('.timeline');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineLine = document.querySelector('.timeline::after');
+    
+    // Create intersection observer for timeline items
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Calculate and set the line height
+                const timelineRect = timeline.getBoundingClientRect();
+                const itemRect = entry.target.getBoundingClientRect();
+                const progress = (itemRect.top - timelineRect.top) / timelineRect.height;
+                const lineHeight = Math.max(0, Math.min(100, progress * 100));
+                
+                timeline.style.setProperty('--line-height', `${lineHeight}%`);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '-50px'
+    });
+    
+    // Observe each timeline item
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Load saved preferences
@@ -424,6 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
   smoothScroll()
   handleFormSubmission()
   setupTeacherAnimations()
+  setupTimelineAnimations()
 
   // Trigger initial hero animations
   setTimeout(() => {
