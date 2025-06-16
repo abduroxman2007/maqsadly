@@ -26,13 +26,22 @@ function recache() {
   scrollCheck();
 }
 
+// Robust viewport check: at least 50% of element must be visible
+function isInViewport(element, threshold = 0.5) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const elementHeight = rect.height;
+  // Calculate how much of the element is visible
+  const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+  const visibleRatio = visibleHeight / elementHeight;
+  return visibleRatio >= threshold;
+}
+
 function scrollCheck() {
-  const offset = getScrollOffset();
-  const midline = cache.viewport.height * 0.5;
-  cache.rects.forEach((rect, i) => {
-    nodes[i].classList.toggle("active", rect.y - offset.y < midline);
+  nodes.forEach((node) => {
+    node.classList.toggle("active", isInViewport(node, 0.5));
   });
-};
+}
 
 function getScrollOffset() {
   return {
@@ -78,22 +87,4 @@ function rect(e) {
   };
 };
 
-//by Saym Ash//
-$(window).on("load", function() {
-  $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".timeline-panel").each(function() {
-      var objectBottom = $(this).offset().top -200 + $(this).outerHeight();
-      if (objectBottom < windowBottom) {
-        if ($(this).css("opacity") == 0) {
-          $(this).fadeTo(500, 1);
-        }
-      } else {
-        if ($(this).css("opacity") == 1) {
-          $(this).fadeTo(500, 0);
-        }
-      }
-    });
-  }).scroll();
-});
-//by Saym Ash//
+// Removed jQuery fade logic for .timeline-panel

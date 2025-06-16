@@ -1,4 +1,17 @@
 /********************************************************/
+.timeline-badge,
+.timeline-panel,
+.timeline-panel-img {
+  opacity: 0;
+  /* Optionally add transform for slide-in effect */
+  transition: opacity 0.6s, transform 0.6s;
+}
+.timeline-badge.active,
+.timeline-panel.active,
+.timeline-panel-img.active {
+  opacity: 1;
+  /* Optionally reset transform */
+}
 
 .timeline {
   list-style: none;
@@ -35,18 +48,19 @@
 
 /************************************************************************************/
 
-.timeline>li {
+.timeline > li {
   position: relative;
 }
 
 /************************************************************************************/
 
-.timeline>li:before, .timeline>li:after {
+.timeline > li:before,
+.timeline > li:after {
   content: " ";
   display: table;
 }
 
-.timeline>li:after {
+.timeline > li:after {
   clear: both;
 }
 
@@ -59,7 +73,7 @@
   padding: 50px;
   position: relative;
   text-align: justify;
-  color:var(--text-color);
+  color: var(--text-color);
 }
 
 /************************************************************************************/
@@ -254,21 +268,24 @@
 /************************************************************************************/
 /* right side  */
 
-.timeline-panel.timeline-inverted, .timeline-inverted>.timeline-panel {
+.timeline-panel.timeline-inverted,
+.timeline-inverted > .timeline-panel {
   float: right;
 }
 
-.timeline-panel.timeline-inverted:before, .timeline-inverted>.timeline-panel:before {
+.timeline-panel.timeline-inverted:before,
+.timeline-inverted > .timeline-panel:before {
   left: -8vw;
   right: auto;
 }
-.timeline-panel.timeline-inverted:after, .timeline-inverted>.timeline-panel:after {
+.timeline-panel.timeline-inverted:after,
+.timeline-inverted > .timeline-panel:after {
   background-color: var(--secondary-color);
   left: -14vw;
   right: auto;
   width: 7vw;
 }
-.timeline-title{
+.timeline-title {
   font-size: 2em;
   line-height: 1.5;
   text-align: center;
@@ -277,17 +294,16 @@
 
 /************************************************************************************/
 
-
 .endpart {
-  position:relative;
+  position: relative;
   height: 50vh;
   background-color: var(--bg-color);
   z-index: 3;
-  margin-top:100px;
-  text-align:center;
+  margin-top: 100px;
+  text-align: center;
 }
-.endpart p{
-  padding-top:200px;
+.endpart p {
+  padding-top: 200px;
 }
 /************************************************************************************/
 @keyframes animated-line {
@@ -411,38 +427,59 @@
     background-color: var(--primary-color);
   }
 }
-@media (max-width: 1023px)
-and (-webkit-min-device-pixel-ratio:1)
-  {
+
+/* RESPONSIVE DESIGN - FIXED */
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1) {
   .connection-line {
     display: none;
   }
   .timeline {
     padding-top: 50px;
     margin-left: 0;
+    padding-left: 30px; /* Add padding for left line */
   }
+
+  /* LEFT SIDE LINE FOR MOBILE */
   .timeline:before {
-    left: 50%;
-    display: none;
+    left: 20px; /* Position line on left */
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: var(--secondary-color);
+    border: none;
   }
+
   .timeline:after {
-    left: 50%;
-    display: none;
+    left: 20px; /* Position progress line on left */
+    display: block;
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    border: none;
+    height: 0%;
+    transition: height 0.3s ease;
   }
-  .timeline>li {
+
+  .timeline > li {
     padding-bottom: 10%;
+    margin-left: 50px; /* Space from left line */
   }
-  .timeline>li>.timeline-badge {
-    width: 125px;
-    height: 125px;
+
+  .timeline > li > .timeline-badge {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    line-height: 125px;
-    font-size: 2em;
-    left: 50%;
+    line-height: 40px;
+    font-size: 1.2em;
+    left: -15px; /* Position on left line */
     top: 0;
-    margin-bottom: 50px;
-    position: relative;
+    margin-bottom: 20px;
+    position: absolute;
+    background-color: var(--bg-color);
+    border: 2px solid var(--secondary-color);
   }
+
   .timeline-badge.active {
     color: var(--primary-color);
     animation-name: lines-mob;
@@ -466,33 +503,40 @@ and (-webkit-min-device-pixel-ratio:1)
     -ms-animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
   }
-  .timeline>li>.timeline-panel {
-    width: 100vw;
-    height: 35vh;
+
+  .timeline > li > .timeline-panel {
+    width: calc(100% - 60px);
+    height: auto;
     float: none;
     left: 0%;
     background-color: var(--bg-color);
     z-index: 5;
     display: block;
-    padding: 5%;
-    height: auto;
+    padding: 20px;
     text-align: justify;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
   }
-  .timeline>li>.timeline-panel.timeline-inverted, .timeline>li.timeline-inverted>.timeline-panel {
+
+  .timeline > li > .timeline-panel.timeline-inverted,
+  .timeline > li.timeline-inverted > .timeline-panel {
     float: none;
   }
-  .timeline>li>.timeline-panel::before {
+
+  .timeline > li > .timeline-panel::before {
     display: none;
   }
-  .timeline>li>.timeline-panel::after {
+  .timeline > li > .timeline-panel::after {
     display: none;
   }
-  .timeline>li>.timeline-panel-img::before {
+  .timeline > li > .timeline-panel-img::before {
     display: none;
   }
-  .timeline>li>.timeline-panel-img::after {
+  .timeline > li > .timeline-panel-img::after {
     display: none;
   }
+
   .timeline-body p {
     font-size: 90%;
     line-height: 1.25;
@@ -507,38 +551,38 @@ and (-webkit-min-device-pixel-ratio:1)
     max-width: 90vw;
     left: auto;
     right: auto;
+    border-radius: 8px;
   }
-
 
   @keyframes lines-mob {
     0% {
-      border: 1px solid var(--secondary-color);
+      border: 2px solid var(--secondary-color);
       transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       -webkit-transform: scale(1, 1);
       -moz-transform: scale(1, 1);
     }
     50% {
-      border: 1.25px solid var(--accent-color);
+      border: 2px solid var(--accent-color);
       transform: scale(1.2, 1.2);
       -ms-transform: scale(1.2, 1.2);
       -webkit-transform: scale(1.2, 1.2);
       -moz-transform: scale(1.2, 1.2);
     }
     100% {
-      border: 1.5px solid var(--primary-color);
+      border: 2px solid var(--primary-color);
       transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       -webkit-transform: scale(1, 1);
       -moz-transform: scale(1, 1);
     }
   }
+
   .timeline-body p {
     font-size: 1em;
     line-height: 1.4;
     text-align: justify;
   }
-
 }
 
 /* Dark Mode Overrides for Timeline */
@@ -552,7 +596,7 @@ and (-webkit-min-device-pixel-ratio:1)
     border: 1.25px solid var(--secondary-color);
   }
   .timeline-panel:before {
-    border: 1px solid  white;
+    border: 1px solid white;
     background-color: var(--bg-color);
   }
   .timeline-panel-img:before {
@@ -571,32 +615,60 @@ and (-webkit-min-device-pixel-ratio:1)
   }
 
   @keyframes ani-img {
-    0% { background-color: white; }
-    50% { background-color: var(--accent-color); }
-    100% { background-color: var(--secondary-color); }
+    0% {
+      background-color: white;
+    }
+    50% {
+      background-color: var(--accent-color);
+    }
+    100% {
+      background-color: var(--secondary-color);
+    }
   }
   @keyframes lines3 {
-    0% { border: 1px solid white; }
-    50% { border: 1.25px solid var(--accent-color); }
-    100% { border: 1.5px solid var(--secondary-color); }
+    0% {
+      border: 1px solid white;
+    }
+    50% {
+      border: 1.25px solid var(--accent-color);
+    }
+    100% {
+      border: 1.5px solid var(--secondary-color);
+    }
   }
   @keyframes lines {
-    0% { border: 1px solid white; }
-    50% { border: 1.25px solid var(--accent-color); }
-    100% { border: 1.5px solid var(--secondary-color); }
+    0% {
+      border: 1px solid white;
+    }
+    50% {
+      border: 1.25px solid var(--accent-color);
+    }
+    100% {
+      border: 1.5px solid var(--secondary-color);
+    }
   }
   @keyframes lines2 {
-    50% { background-color: var(--accent-color); }
-    100% { background-color: var(--secondary-color); }
+    50% {
+      background-color: var(--accent-color);
+    }
+    100% {
+      background-color: var(--secondary-color);
+    }
   }
   @media (max-width: 1023px) {
     .timeline-badge.active {
       color: var(--secondary-color);
     }
     @keyframes lines-mob {
-      0% { border: 1px solid white; }
-      50% { border: 1.25px solid var(--accent-color); }
-      100% { border: 1.5px solid var(--secondary-color); }
+      0% {
+        border: 2px solid white;
+      }
+      50% {
+        border: 2px solid var(--accent-color);
+      }
+      100% {
+        border: 1.5px solid var(--secondary-color);
+      }
     }
   }
 }

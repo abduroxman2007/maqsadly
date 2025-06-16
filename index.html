@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maqsadly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="second.css">
     <script type="module" src="second.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="animations.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -89,21 +93,23 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-left">
+            <div class="hero-left" data-animate="left">
                 <h1 data-translate="hero-title">
                     <span class="hero-accent">Achieve</span> Your Dream SAT Score & Get Into <span class="hero-accent">Top</span> Universities
                 </h1>
-                <p data-translate="hero-subtitle">Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide with our proven methodology.</p>
-                <div class="hero-buttons">
+                <div data-animate="left">
+                    <p data-translate="hero-subtitle">Join thousands of students who have successfully improved their SAT scores and gained admission to top universities worldwide with our proven methodology.</p>
+                </div>
+                <div class="hero-buttons" data-animate="left">
                     <button class="cta-button primary" data-translate="start-now">Start Now</button>
                     <button class="cta-button secondary" data-translate="watch-how">Watch How It Works</button>
                 </div>
-                <div class="trust-badge">
+                <div class="trust-badge" data-animate="left">
                     <span class="trust-badge-icon">✓</span>
                     <span data-translate="trust-badge">5,000+ students trained • 95% success rate</span>
                 </div>
             </div>
-            <div class="hero-right">
+            <div class="hero-right" data-animate="right">
                 <img class="hero-svg" src="svg/undraw_educator_6dgp.svg" alt="Student achieving success">
             </div>
         </div>
@@ -112,13 +118,15 @@
     <!-- Mission Section -->
     <section class="mission-section">
       <div class="mission-container">
-        <div class="mission-left">
+        <div class="mission-left" data-animate="left">
           <h2 data-translate="mission-title">Our Mission</h2>
-          <p data-translate="mission-description">
+          <div data-animate="left">
+            <p data-translate="mission-description">
             SAT and university admissions are undergoing a revolution in Uzbekistan. As top universities make SAT scores mandatory, our mission is to empower every ambitious student with the tools, guidance, and confidence to succeed. We believe that access to world-class education should be open to all, and we are here to help you unlock your potential and achieve your dreams.
           </p>
+          </div>
         </div>
-        <div class="mission-right">
+        <div class="mission-right" data-animate="right">
           <img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?auto=format&fit=facearea&w=600&q=80" alt="Mission" class="mission-image">
         </div>
       </div>
@@ -127,12 +135,12 @@
     <!-- Why We Are Different Section -->
     <section class="why-different-section">
       <div class="why-different-container">
-        <h2 data-translate="why-different-title">Why We Are Different</h2>
+        <h2 data-animate="center" data-translate="why-different-title">Why We Are Different</h2>
         <div class="why-different-cards">
-          <div class="why-card">
+          <div class="why-card" data-animate="left" data-animate-delay="100">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
-            <div class="why-card-content">
+            <div class="why-card-content" data-animate="left">
               <span class="why-card-icon">
                 <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                   <defs>
@@ -146,11 +154,13 @@
                   <circle cx="12" cy="12" r="2"/>
                 </svg>
               </span>
-              <div class="why-card-title" data-translate="why-card1-title">Personalized SAT Coaching</div>
-              <div class="why-card-desc" data-translate="why-card1-desc">Every student gets a tailored study plan and 1-on-1 support to maximize their score.</div>
+              <div data-animate="left">
+                  <div class="why-card-title" data-translate="why-card1-title">Personalized SAT Coaching</div>
+                  <div class="why-card-desc" data-translate="why-card1-desc">Every student gets a tailored study plan and 1-on-1 support to maximize their score.</div>
+              </div>
             </div>
           </div>
-          <div class="why-card">
+          <div class="why-card" data-animate="right" data-animate-delay="200">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="why-card-content">
@@ -170,7 +180,7 @@
               <div class="why-card-desc" data-translate="why-card2-desc">95% of our students improve their SAT scores and gain admission to top universities.</div>
             </div>
           </div>
-          <div class="why-card">
+          <div class="why-card" data-animate="left" data-animate-delay="300">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="why-card-content">
@@ -191,7 +201,7 @@
               <div class="why-card-desc" data-translate="why-card3-desc">We connect you with leading universities and scholarship opportunities worldwide.</div>
             </div>
           </div>
-          <div class="why-card">
+          <div class="why-card" data-animate="right" data-animate-delay="400">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="why-card-content">
@@ -220,41 +230,119 @@
     <!-- Problems We Solve Section -->
     <section class="problems-section">
       <div class="problems-container">
-        <div class="problems-header">
+        <div class="problems-header" data-animate="card">
           <h2 data-translate="problems-title">What Problems Do We Solve?</h2>
-          <p data-translate="problems-subtitle">We address the key challenges students face in their journey to top universities</p>
+          <p data-translate="problems-subtitle">We address the key challenges students face in their journey to
+              top universities</p>
         </div>
         <div class="problems-grid">
-          <div class="chat-card">
-            <div class="chat-bubble parent">
-              <div class="chat-label" data-translate="student-problem">Student Problem</div>
-              <p data-translate="problem1-question">I don't know how to prepare for SAT effectively</p>
-            </div>
-            <div class="chat-bubble assistant">
-              <div class="chat-label" data-translate="our-solution">Our Solution</div>
-              <p data-translate="problem1-answer">We provide structured, personalized SAT preparation with proven methodologies and expert guidance</p>
-            </div>
-          </div>
-          <div class="chat-card">
-            <div class="chat-bubble parent">
-              <div class="chat-label" data-translate="student-problem">Student Problem</div>
-              <p data-translate="problem2-question">I'm confused about university selection and application process</p>
-            </div>
-            <div class="chat-bubble assistant">
-              <div class="chat-label" data-translate="our-solution">Our Solution</div>
-              <p data-translate="problem2-answer">Our comprehensive admission guidance helps you choose the right universities and navigate the application process</p>
-            </div>
-          </div>
-          <div class="chat-card">
-            <div class="chat-bubble parent">
-              <div class="chat-label" data-translate="student-problem">Student Problem</div>
-              <p data-translate="problem3-question">I need help with scholarship applications</p>
-            </div>
-            <div class="chat-bubble assistant">
-              <div class="chat-label" data-translate="our-solution">Our Solution</div>
-              <p data-translate="problem3-answer">We assist with scholarship applications and help maximize your chances of receiving financial aid</p>
-            </div>
-          </div>
+          <!-- First 3 chat instances remain as they were, using problem1, problem2, problem3 keys -->
+          <section class="msger" data-animate="card" data-animate-delay="100">
+            <main class="msger-chat">
+              <div class="msg left-msg">
+                <div class="msg-img" aria-label="Bot avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Mamatqul</div> <!-- Changed from Student for consistency -->
+                  </div>
+                  <div class="msg-text" data-translate="problem1-question">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+              <div class="msg right-msg">
+                <div class="msg-img" aria-label="User avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Maqsadly</div>
+                  </div>
+                  <div class="msg-text" data-translate="problem1-answer">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </section>
+          <section class="msger" data-animate="card" data-animate-delay="200">
+            <main class="msger-chat">
+              <div class="msg left-msg">
+                <div class="msg-img" aria-label="Bot avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Maqsadxo'ja</div> <!-- Changed from Student -->
+                  </div>
+                  <div class="msg-text" data-translate="problem2-question">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+              <div class="msg right-msg">
+                <div class="msg-img" aria-label="User avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Maqsadly</div>
+                  </div>
+                  <div class="msg-text" data-translate="problem2-answer">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </section>
+          <section class="msger" data-animate="card" data-animate-delay="300">
+            <main class="msger-chat">
+              <div class="msg left-msg">
+                <div class="msg-img" aria-label="Bot avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Musaffoxon</div> <!-- Changed from Student -->
+                  </div>
+                  <div class="msg-text" data-translate="problem3-question">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+              <div class="msg right-msg">
+                <div class="msg-img" aria-label="User avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Maqsadly</div>
+                  </div>
+                  <div class="msg-text" data-translate="problem3-answer">
+                    <!-- Content will be populated by script.js translations -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </section>
+
+          <!-- UPDATED 4th Chat Instance -->
+          <section class="msger" data-animate="card" data-animate-delay="400">
+            <main class="msger-chat">
+              <div class="msg left-msg">
+                <div class="msg-img" aria-label="Bot avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Matonatbegim</div> <!-- Changed from Student -->
+                  </div>
+                  <div class="msg-text" data-translate="problem4-question">
+                    <!-- Content will be populated by new script.js translations -->
+                  </div>
+                </div>
+              </div>
+              <div class="msg right-msg">
+                <div class="msg-img" aria-label="User avatar"></div>
+                <div class="msg-bubble">
+                  <div class="msg-info">
+                    <div class="msg-info-name">Maqsadly</div>
+                  </div>
+                  <div class="msg-text" data-translate="problem4-answer">
+                    <!-- Content will be populated by new script.js translations -->
+                  </div>
+                </div>
+              </div>
+            </main>
+          </section>
         </div>
       </div>
     </section>
@@ -262,8 +350,8 @@
     <!-- Process and Timeline -->
     <section id="process-timeline" class="process-timeline-section">
       <div class="process-timeline-container">
-        <p class="section-subheader" data-translate="process-subtitle">Our Proven Path to Your Success</p>
-        <h2 data-translate="process-title">Our Step-by-Step Process to University Admissions</h2>
+        <p class="section-subheader" data-animate="center" data-translate="process-subtitle">Our Proven Path to Your Success</p>
+        <h2 data-animate="center" data-translate="process-title">Our Step-by-Step Process to University Admissions</h2>
       </div>
     </section>  
        <!--TimeLine start-->
@@ -347,10 +435,10 @@
     <!-- What You Will Learn Section -->
     <section class="what-will-learn-section">
       <div class="what-will-learn-container">
-        <p class="section-subheader" data-translate="learn-subtitle">Here's what you'll master after completing our comprehensive course:</p>
-        <h2 data-translate="learn-title">What will you learn after completing this course?</h2>
+        <p class="section-subheader" data-animate="center" data-translate="learn-subtitle">Here's what you'll master after completing our comprehensive course:</p>
+        <h2 data-animate="center" data-translate="learn-title">What will you learn after completing this course?</h2>
         <div class="learn-cards-grid">
-          <div class="learn-card animate-slide-left">
+          <div class="learn-card" data-animate="left" data-animate-delay="100">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -358,7 +446,7 @@
               <div class="learn-card-desc" data-translate="learn1">How to choose the right university for your future</div>
             </div>
           </div>
-          <div class="learn-card animate-up">
+          <div class="learn-card" data-animate="center" data-animate-delay="200">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -366,7 +454,7 @@
               <div class="learn-card-desc" data-translate="learn2">How to prepare independently for IELTS and SAT</div>
             </div>
           </div>
-          <div class="learn-card animate-slide-right">
+          <div class="learn-card" data-animate="right" data-animate-delay="300">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -374,7 +462,7 @@
               <div class="learn-card-desc" data-translate="learn3">How to calculate GPA - School grades correctly</div>
             </div>
           </div>
-          <div class="learn-card animate-slide-left">
+          <div class="learn-card" data-animate="left" data-animate-delay="400">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -382,7 +470,7 @@
               <div class="learn-card-desc" data-translate="learn4">How to start building your portfolio</div>
             </div>
           </div>
-          <div class="learn-card animate-up">
+          <div class="learn-card" data-animate="center" data-animate-delay="500">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -390,7 +478,7 @@
               <div class="learn-card-desc" data-translate="learn5">How to work with top data platforms</div>
             </div>
           </div>
-          <div class="learn-card animate-slide-right">
+          <div class="learn-card" data-animate="right" data-animate-delay="600">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -398,7 +486,7 @@
               <div class="learn-card-desc" data-translate="learn6">How to write essays and recommendations that admissions committees want to read</div>
             </div>
           </div>
-          <div class="learn-card animate-slide-left">
+          <div class="learn-card" data-animate="left" data-animate-delay="700">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -406,7 +494,7 @@
               <div class="learn-card-desc" data-translate="learn7">How to successfully pass interviews</div>
             </div>
           </div>
-          <div class="learn-card animate-up">
+          <div class="learn-card" data-animate="center" data-animate-delay="800">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -414,7 +502,7 @@
               <div class="learn-card-desc" data-translate="learn8">How to properly apply to American universities</div>
             </div>
           </div>
-          <div class="learn-card animate-slide-right">
+          <div class="learn-card" data-animate="right" data-animate-delay="900">
             <img src="svg/Frame_2087326401.svg" alt="Frame" class="why-card-bg why-card-bg-light">
             <img src="svg/Frame_2087326401_dark.svg" alt="Frame" class="why-card-bg why-card-bg-dark">
             <div class="learn-card-content">
@@ -429,13 +517,13 @@
     <!-- To Whom These Courses Are Section -->
     <section id="about" class="about">
       <div class="about-container">
-        <div class="about-header">
+        <div class="about-header" data-animate="center">
           <h2 data-translate="about-title">To Whom These Courses Are</h2>
           <p data-translate="about-subtitle">Discover if our courses are right for you</p>
         </div>
         
         <div class="about-content">
-          <div class="about-text">
+          <div class="about-text" data-animate="left">
             <p data-translate="about-description">Maqsadly is dedicated to helping students achieve their academic goals through comprehensive SAT preparation. Our proven methodology combines expert instruction, personalized attention, and cutting-edge resources to ensure your success.</p>
             
             <h3 data-translate="who-for-title">Who is this course for?</h3>
@@ -447,7 +535,7 @@
             </ul>
           </div>
           
-          <div class="about-form">
+          <div class="about-form" data-animate="right">
             <h3 data-translate="get-started">Get Started Today</h3>
             <form>
               <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
@@ -462,15 +550,17 @@
     <!-- Teachers Section -->
     <section id="teachers" class="teachers">
         <div class="teachers-container">
-            <h2 data-translate="teachers-title">Meet Our Expert Teachers</h2>
+            <div data-animate="center">
+                <h2  data-translate="teachers-title">Meet Our Expert Teachers</h2>
+            </div>
             
             <div class="teacher-list">
                 <!-- Teacher 1 - Image Left, Info Right -->
-                <div class="teacher-item">
-                    <div class="teacher-image animate-left">
+                <div class="teacher-item" data-animate="card" data-animate-delay="100">
+                    <div class="teacher-image">
                         <img src="img/photo_2025-06-10_17-11-37.jpg" alt="Dr. Sarah Johnson">
                     </div>
-                    <div class="teacher-info animate-right">
+                    <div class="teacher-info">
                         <h3 data-translate="teacher1-name">Dr. Sarah Johnson</h3>
                         <p class="teacher-title" data-translate="teacher1-title">SAT Math Expert</p>
                         <p class="teacher-description" data-translate="teacher1-description">With over 15 years of experience in SAT preparation, Dr. Johnson has helped thousands of students achieve their target math scores. She holds a PhD in Mathematics from MIT and specializes in making complex concepts simple and understandable.</p>
@@ -483,8 +573,8 @@
                 </div>
                 
                 <!-- Teacher 2 - Image Right, Info Left -->
-                <div class="teacher-item">
-                    <div class="teacher-info animate-left">
+                <div class="teacher-item" data-animate="card" data-animate-delay="200">
+                    <div class="teacher-info">
                         <h3 data-translate="teacher2-name">Prof. Michael Chen</h3>
                         <p class="teacher-title" data-translate="teacher2-title">English & Writing Specialist</p>
                         <p class="teacher-description" data-translate="teacher2-description">Professor Chen brings a wealth of knowledge in English literature and writing. His innovative teaching methods have consistently helped students improve their reading comprehension and essay writing skills for the SAT.</p>
@@ -494,17 +584,17 @@
                             <span class="achievement" data-translate="teacher2-achievement3">✓ 12+ Years Teaching</span>
                         </div>
                     </div>
-                    <div class="teacher-image animate-right">
+                    <div class="teacher-image ">
                         <img src="img/photo_2025-06-10_17-10-37.jpg" alt="Prof. Michael Chen">
                     </div>
                 </div>
                 
                 <!-- Teacher 3 - Image Left, Info Right -->
-                <div class="teacher-item">
-                    <div class="teacher-image animate-left">
+                <div class="teacher-item" data-animate="card" data-animate-delay="300">
+                    <div class="teacher-image ">
                         <img src="img/IMG_1851.jpg" alt="Dr. Emily Rodriguez">
                     </div>
-                    <div class="teacher-info animate-right">
+                    <div class="teacher-info ">
                         <h3 data-translate="teacher3-name">Dr. Emily Rodriguez</h3>
                         <p class="teacher-title" data-translate="teacher3-title">College Admission Counselor</p>
                         <p class="teacher-description" data-translate="teacher3-description">Dr. Rodriguez specializes in college admissions and has guided hundreds of students through the complex process of university applications. Her expertise extends to scholarship applications and interview preparation.</p>
@@ -517,8 +607,8 @@
                 </div>
                 
                 <!-- Teacher 4 - Image Right, Info Left -->
-                <div class="teacher-item">
-                    <div class="teacher-info animate-left">
+                <div class="teacher-item" data-animate="card" data-animate-delay="400">
+                    <div class="teacher-info ">
                         <h3 data-translate="teacher4-name">James Wilson</h3>
                         <p class="teacher-title" data-translate="teacher4-title">SAT Strategy Coach</p>
                         <p class="teacher-description" data-translate="teacher4-description">James focuses on test-taking strategies and time management techniques. His systematic approach to SAT preparation has helped students maximize their potential and achieve significant score improvements.</p>
@@ -528,7 +618,7 @@
                             <span class="achievement" data-translate="teacher4-achievement3">✓ 8+ Years Coaching</span>
                         </div>
                     </div>
-                    <div class="teacher-image animate-right">
+                    <div class="teacher-image ">
                         <img src="img/IMG_0913.PNG" alt="James Wilson">
                     </div>
                 </div>
@@ -536,40 +626,15 @@
         </div>
     </section>
 
-    <!-- Social Media Icons -->
-    <div class="social-links">
-        <a href="#" aria-label="Facebook" class="social-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b88746" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-        </a>
-        <a href="#" aria-label="Twitter" class="social-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b88746" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-            </svg>
-        </a>
-        <a href="#" aria-label="Instagram" class="social-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b88746" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-        </a>
-        <a href="#" aria-label="LinkedIn" class="social-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b88746" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-            </svg>
-        </a>
-    </div>
 
     <!-- Courses Section -->
     <section id="courses" class="courses">
-        <div class="courses-container">
-            <h2 data-translate="courses-title">Choose Your Perfect Course</h2>
+        <div class="courses-container" >
+            <div data-animate="center">
+                <h2 data-translate="courses-title">Choose Your Perfect Course</h2>
+            </div>
             <div class="courses-grid">
-                <div class="course-card basic animate-up">
+                <div class="course-card basic" data-animate="card" data-animate-delay="100">
                     <h3 data-translate="course-english">SAT English Course</h3>
                     <div class="price">$299</div>
                     <ul>
@@ -581,7 +646,7 @@
                     <button class="course-btn" data-translate="choose-plan">Choose Plan</button>
                 </div>
                 
-                <div class="course-card premium animate-up">
+                <div class="course-card premium" data-animate="card" data-animate-delay="200">
                     <div class="badge" data-translate="popular">Most Popular</div>
                     <h3 data-translate="course-full">Full SAT Course</h3>
                     <div class="price">$499</div>
@@ -595,7 +660,7 @@
                     <button class="course-btn" data-translate="choose-plan">Choose Plan</button>
                 </div>
                 
-                <div class="course-card ultimate animate-up">
+                <div class="course-card ultimate" data-animate="card" data-animate-delay="300">
                     <div class="badge gold" data-translate="best-value">Best Value</div>
                     <h3 data-translate="course-ultimate">Full SAT + Admission Course</h3>
                     <div class="price">$799</div>
@@ -615,11 +680,13 @@
 
     <!-- FAQ Section -->
     <section class="faq">
-        <div class="faq-container">
-            <h2 data-translate="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-container" >
+            <div data-animate="center">
+                <h2 data-translate="faq-title">Frequently Asked Questions</h2>
+            </div>
             <div class="faq-grid">
                 <div class="faq-column">
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="left" data-animate-delay="100">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q1">How long does the course take?</span>
                             <span class="faq-icon">+</span>
@@ -629,7 +696,7 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="left" data-animate-delay="200">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q2">What is your success rate?</span>
                             <span class="faq-icon">+</span>
@@ -639,7 +706,7 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="left" data-animate-delay="300">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q3">Do you offer online classes?</span>
                             <span class="faq-icon">+</span>
@@ -651,7 +718,7 @@
                 </div>
                 
                 <div class="faq-column">
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="right" data-animate-delay="100">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q4">What materials are included?</span>
                             <span class="faq-icon">+</span>
@@ -661,7 +728,7 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="right" data-animate-delay="200">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q5">Can I get a refund?</span>
                             <span class="faq-icon">+</span>
@@ -671,7 +738,7 @@
                         </div>
                     </div>
                     
-                    <div class="faq-item animate-up">
+                    <div class="faq-item" data-animate="right" data-animate-delay="300">
                         <div class="faq-question" onclick="toggleFAQ(this)">
                             <span data-translate="faq-q6">Do you help with college applications?</span>
                             <span class="faq-icon">+</span>
@@ -686,9 +753,9 @@
     </section>
 
     <!-- Collaborators Section -->
-    <section class="collaborators">
+    <!-- <section class="collaborators">
         <div class="collaborators-container">
-            <h2 data-translate="collaborators-title">Наши Университетские Партнеры</h2>
+            <h2 data-animate="center" data-translate="collaborators-title">Our University Partners</h2>
             <div class="logo-slider">
                 <div class="logo-track">
                     <img src="/placeholder.svg?height=60&width=120" alt="Harvard University">
@@ -697,7 +764,7 @@
                     <img src="/placeholder.svg?height=60&width=120" alt="Yale">
                     <img src="/placeholder.svg?height=60&width=120" alt="Princeton">
                     <img src="/placeholder.svg?height=60&width=120" alt="Columbia">
-                    <!-- Duplicate for seamless loop -->
+
                     <img src="/placeholder.svg?height=60&width=120" alt="Harvard University">
                     <img src="/placeholder.svg?height=60&width=120" alt="MIT">
                     <img src="/placeholder.svg?height=60&width=120" alt="Stanford">
@@ -707,12 +774,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="contact-container">
-            <div class="contact-left animate-left">
+            <div class="contact-left" data-animate="left">
                 <h2 data-translate="contact-title">Get In Touch</h2>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -726,7 +793,7 @@
                 </div>
             </div>
             
-            <div class="contact-right animate-right">
+            <div class="contact-right" data-animate="right">
                 <form class="contact-form">
                     <input type="text" placeholder="Your Name" data-translate-placeholder="name-placeholder" required>
                     <input type="tel" placeholder="Your Phone Number" data-translate-placeholder="phone-placeholder" required>
