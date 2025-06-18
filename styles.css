@@ -1,68 +1,3 @@
-/* :root {
-  --primary-color: #4f46e5;
-  --secondary-color: #7c3aed;
-  --accent-color: #f59e0b;
-  --text-color: #1f2937;
-  --text-light: #6b7280;
-  --bg-color: #ffffff;
-  --bg-secondary: #f9fafb;
-  --border-color: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="dark"] {
-  --text-color: #f9fafb;
-  --text-light: #d1d5db;
-  --bg-color: #111827;
-  --bg-secondary: #1f2937;
-  --border-color: #374151;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-} */
-
-/* green relating */
-/* :root {
-  --primary-color: #062; 
-  --secondary-color: #163832;
-  --accent-color: #f59e0b;
-  --text-color: #1f493f;
-  --text-light: #254b33;
-  --bg-color: #b5d8c7;
-  --bg-secondary: #9cccc0;
-  --border-color: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-} */
-
-/* luna (blue) color palate */
-/* :root {
-  --primary-color: #011c40; 
-  --secondary-color: #023859;
-  --accent-color: #f59e0b;
-  --text-color: #011c40;
-  --text-light: #023859;
-  --bg-color: #a7ebf2;
-  --bg-secondary: #54acbf;
-  --border-color: #e5e7eb;
-  --border-color: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-} */
-
-/* blue rose */
-/* :root {
-  --primary-color: #153a50; 
-  --secondary-color: #5b8094;
-  --accent-color: #f59e0b;
-  --text-color: #153a50;
-  --text-light: #5b8094;
-  --bg-color: #aad0e2;
-  --bg-secondary: #87b1c8;
-  --border-color: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-} */
 
 /* Blue + Purple */
 :root {
@@ -114,86 +49,17 @@ body {
 }
 
 /* MINIMALIST BACKGROUND ANIMATION */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
+body {
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 80%, rgba(184, 135, 70, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(7, 44, 80, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(253, 245, 166, 0.02) 0%, transparent 50%);
-  animation: backgroundFloat 20s ease-in-out infinite;
-  pointer-events: none;
+  background: var(--bg-color);
   z-index: -1;
 }
 
-[data-theme="dark"] body::before {
-  background: radial-gradient(circle at 20% 80%, rgba(184, 135, 70, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(253, 245, 166, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(184, 135, 70, 0.02) 0%, transparent 50%);
+[data-theme="dark"] body {
+  background: var(--bg-color);
 }
 
-@keyframes backgroundFloat {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
-  33% {
-    transform: translateY(-10px) rotate(1deg);
-    opacity: 0.8;
-  }
-  66% {
-    transform: translateY(5px) rotate(-1deg);
-    opacity: 0.9;
-  }
-}
-
-/* FLOATING GEOMETRIC SHAPES */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(2px 2px at 20px 30px, rgba(184, 135, 70, 0.1), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(7, 44, 80, 0.08), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(253, 245, 166, 0.1), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(184, 135, 70, 0.05), transparent);
-  background-repeat: repeat;
-  background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px;
-  animation: floatingDots 30s linear infinite;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.6;
-}
-
-[data-theme="dark"] body::after {
-  background-image: radial-gradient(2px 2px at 20px 30px, rgba(184, 135, 70, 0.15), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(253, 245, 166, 0.1), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(184, 135, 70, 0.08), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(253, 245, 166, 0.05), transparent);
-}
-
-@keyframes floatingDots {
-  0% {
-    transform: translateY(0px) translateX(0px);
-  }
-  100% {
-    transform: translateY(-100px) translateX(50px);
-  }
-}
-
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  body::before,
-  body::after {
-    animation: none;
-  }
-}
 
 /* Navbar Styles */
 .navbar {
