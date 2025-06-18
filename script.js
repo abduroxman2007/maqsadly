@@ -985,3 +985,5 @@ function toggleLanguageDropdownMobile() {
 //     rect.right > 0
 //   );
 // }
+
+// (Logo theme switcher JS removed; now handled by CSS)
