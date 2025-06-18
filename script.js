@@ -1,3 +1,4 @@
+
 // Mobile menu functionality
 function toggleMobileMenu() {
   const hamburger = document.querySelector(".hamburger")
