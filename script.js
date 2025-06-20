@@ -1,4 +1,3 @@
-
 // Mobile menu functionality
 function toggleMobileMenu() {
   const hamburger = document.querySelector(".hamburger")
@@ -111,38 +110,58 @@ const translations = {
     "start-journey": "Start Your Journey",
 
     // Teachers Section
-    "teachers-title": "Meet Our Expert Teachers",
-    "teacher1-name": "Dr. Sarah Johnson",
-    "teacher1-title": "SAT Math Expert",
+    "teachers-title": "Meet Our Expert Mentors",
+    "teacher1-name": "Olimjon Uvayzov",
+    "teacher1-title": "SAT English Expert",
     "teacher1-description":
-      "With over 15 years of experience in SAT preparation, Dr. Johnson has helped thousands of students achieve their target math scores. She holds a PhD in Mathematics from MIT and specializes in making complex concepts simple and understandable.",
-    "teacher1-achievement1": "✓ 15+ Years Experience",
-    "teacher1-achievement2": "✓ PhD Mathematics MIT",
-    "teacher1-achievement3": "✓ 3000+ Students Taught",
+      "With 750 in EBRW on the SAT and 1,5 years of teaching experience, Olimjon has designed a special 2-month curriculum for the August test takers, which will navigate the students from mastering time management techniques to analyzing excerpts from scholarly ancient texts – a unique approach to tackle even the most subtle inference and vocabulary-in-context questions <br/> <br/> Olimjon will conduct special classes on practice + analysis where students can witness how he solves questions and learn the way he analyzes them. At Maqsadly, he is dedicated to closely tracking each student's progress and offering personalized support to ensure every student reaches their highest potential.",
+    "teacher1-achievement1": "✓ 750 EBRW on the SAT",
+    "teacher1-achievement2": "✓ 1,5+ Years Experience",
+    "teacher1-achievement3": "✓ special 2-month curriculum",
 
-    "teacher2-name": "Prof. Michael Chen",
-    "teacher2-title": "English & Writing Specialist",
+    "teacher2-name": "Azizbek Alijonov",
+    "teacher2-title": "SAT Math Specialist",
     "teacher2-description":
-      "Professor Chen brings a wealth of knowledge in English literature and writing. His innovative teaching methods have consistently helped students improve their reading comprehension and essay writing skills for the SAT.",
-    "teacher2-achievement1": "✓ Harvard Graduate",
-    "teacher2-achievement2": "✓ Published Author",
-    "teacher2-achievement3": "✓ 12+ Years Teaching",
+    "Azizbek Alijonov is an incoming freshman at KAIST, which ranks TOP 30 in Mechanical Engineering worldwide. Drawing from his perfect 800/800 SAT Math score and years of competitive problem-solving experience, Azizbek has developed a strategic, results-driven program. Each lesson targets essential concepts with precision, while incorporating advanced techniques, time-saving shortcuts, and olympiad-level insights to help students master even the most challenging SAT questions. This program is structured to cover all core SAT Math topics, including Algebra, Advanced Math, Problem Solving & Data Analysis, and Geometry. What sets it apart is its layered approach: <ol> <br/> <li> Foundation Modules reinforce essential skills with crystal-clear explanations.</li> <br/> <li> Strategic Practice Sets simulate real test scenarios with increasing difficulty.</li><br/><li>Olympiad Insights offer elegant techniques and shortcuts rarely found in standard prep materials.</li> <br/><li>Error Analysis Worksheets help students diagnose and correct recurring mistakes.</li></ol>",
+    "teacher2-achievement1": "✓ KAIST Freshman",
+    "teacher2-achievement2": "✓ 800/800 Perfect SAT Math score",
+    "teacher2-achievement3": "✓ 3+ Years Teaching",
 
-    "teacher3-name": "Dr. Emily Rodriguez",
+    "teacher3-name": "Eldor Khamraev",
     "teacher3-title": "College Admission Counselor",
     "teacher3-description":
-      "Dr. Rodriguez specializes in college admissions and has guided hundreds of students through the complex process of university applications. Her expertise extends to scholarship applications and interview preparation.",
-    "teacher3-achievement1": "✓ Former Admissions Officer",
+      " Eldor Khamraev - got admitted to Carnegie Mellon University in Qatar with a full-ride scholarship of $335,000. Majoring in Business Administration, Eldor will serve as a main mentor in Admissions to the universities, leading masterclasses on <ol> <br/> <li> building purposeful & meaningful activities that ties up to their application. </li> <br/> <li>writing challenging supplemental essays (Why US and Why this Major)</li> <br/> <li>emulating games in historical books to your personal essays</li> <br/> <li>finding your niche/spike in your application that builds your brand. </li></ol> <br/> Additionally, Eldor participated in the LaunchX Program, presented his pitch and won the Best Public Speaker Award, which earned him a letter of recommendation from the LaunchX President. Eldor also excelled in international olympiads. In the World Scholar's Cup, after passing the regional stage in Tashkent and the global Stage in Baku, he qualified to the final tournament at the United States, Yale. Representing the Uzbekistan team, he was recognized as the Top Second Scholar in Central Asia and Top 100 Worldwide. On behalf of Maqsadly, we are glad to see Eldor as the main college admissions mentor in our program, where he will pour all his insights and strategies that he used in the admission cycle. ",
+    "teacher3-achievement1": "✓ CMUQ Freshman",
     "teacher3-achievement2": "✓ 500+ Successful Applications",
     "teacher3-achievement3": "✓ Scholarship Expert",
 
-    "teacher4-name": "James Wilson",
-    "teacher4-title": "SAT Strategy Coach",
-    "teacher4-description":
-      "James focuses on test-taking strategies and time management techniques. His systematic approach to SAT preparation has helped students maximize their potential and achieve significant score improvements.",
-    "teacher4-achievement1": "✓ Perfect SAT Scorer",
-    "teacher4-achievement2": "✓ Strategy Specialist",
-    "teacher4-achievement3": "✓ 8+ Years Coaching",
+    "teacher4-name": "Jasurbek Umarov",
+    "teacher4-title": "Harvard Admit & Admissions Mentor",
+    "teacher4-description": "Jasurbek Umarov, a rising freshman at Harvard University's Class of 2029, was awarded a full-ride scholarship worth $392,000. At Maqsadly, Jasurbek will lead a special admissions-focused course dedicated to helping students brainstorm, structure, and craft compelling supplemental essays. With firsthand experience navigating the competitive Ivy League process, he will guide students in writing authentic and powerful responses to some of the most influential prompts.",
+    "teacher4-achievement1": "✓ Harvard Admit, Class of 2029",
+    "teacher4-achievement2": "✓ $392,000 Full-Ride Scholarship",
+    "teacher4-achievement3": "✓ Admissions Mentor",
+    
+    "teacher5-name": "Ozodbek Eshboboev",
+    "teacher5-title": "Amherst College Admit & Guest Speaker",
+    "teacher5-description": "Ozodbek Eshboboev is the second guest speaker, who got admitted to Amherst College with a full-ride scholarship of $400,000, ranking 2nd Best Liberal Arts College in the US. Having done extensive research on the education and public policy of Uzbekistan, Ozodbek will devote his class on ... (please provide the specific topic if available).",
+    "teacher5-achievement1": "✓ Amherst College Admit",
+    "teacher5-achievement2": "✓ $400,000 Full-Ride Scholarship",
+    "teacher5-achievement3": "✓ Education & Policy Researcher",
+    
+    "teacher6-name": "Khusan Rakhimov",
+    "teacher6-title": "Duke University Admit & Karsh Scholar",
+    "teacher6-description": "Finally, our last speaker is Khusan Rakhimov, an incoming freshman at Duke University and a holder of the Karsh International Scholar Program (which is given to a few 10-12 students annually worldwide). With over $400,000 scholarship, Khusan is planning to major in Economics at Duke. In the masterclass, Khusan will talk about building meaningful/purposeful activities that tie up to his application.",
+    "teacher6-achievement1": "✓ Duke University Admit",
+    "teacher6-achievement2": "✓ Karsh International Scholar",
+    "teacher6-achievement3": "✓ $400,000+ Scholarship",
+    
+    "teacher7-name": "Jamshidbek Izzatulloh",
+    "teacher7-title": "Vanderbilt University Admit & Guest Speaker",
+    "teacher7-description": "We're proud to welcome Jamshidbek Izzatulloh as our third admissions guest speaker. Recently admitted to Vanderbilt University—ranked #1 in Education in the U.S.—Jamshidbek secured a full-ride scholarship worth $370,000 as an international student. Having gone through three consecutive admission cycles, Jamshidbek gained deep insight into the 'fit factor'—an often overlooked, yet critical component that plays a huge role in the application. At Maqsadly, he'll lead a seminar that dives into how students can discover colleges that align with their values, goals, and personality—and how to reflect that alignment in their applications.",
+    "teacher7-achievement1": "✓ Vanderbilt University Admit",
+    "teacher7-achievement2": "✓ $370,000 Full-Ride Scholarship",
+    "teacher7-achievement3": "✓ Admissions Seminar Leader",
 
     // Courses Section
     "courses-title": "Choose Your Perfect Course",
@@ -310,37 +329,54 @@ const translations = {
 
     // Teachers Section
     "teachers-title": "Познакомьтесь с нашими экспертами",
-    "teacher1-name": "Доктор Сара Джонсон",
-    "teacher1-title": "Эксперт по математике SAT",
-    "teacher1-description":
-      "Имея более 15 лет опыта в подготовке к SAT, доктор Джонсон помогла тысячам студентов достичь целевых баллов по математике. Она имеет докторскую степень по математике в MIT и специализируется на том, чтобы сделать сложные концепции простыми и понятными.",
-    "teacher1-achievement1": "✓ 15+ лет опыта",
-    "teacher1-achievement2": "✓ Доктор математики MIT",
-    "teacher1-achievement3": "✓ Более 3000 обученных студентов",
+    "teacher1-name": "Олимжон Увайзов",
+    "teacher1-title": "Эксперт по SAT English",
+    "teacher1-description": "Олимжон Увайзов набрал 750 баллов по EBRW на SAT и имеет 1,5 года преподавательского опыта. Он разработал специальную 2-месячную программу для сдающих экзамен в августе, которая охватывает тайм-менеджмент и анализ сложных текстов — уникальный подход для решения даже самых сложных вопросов на понимание и лексику. Олимжон проводит специальные занятия по практике и анализу, где студенты могут увидеть его методы решения и анализа. В Maqsadly он внимательно отслеживает прогресс каждого студента и оказывает персональную поддержку для достижения максимальных результатов.",
+    "teacher1-achievement1": "✓ 750 баллов EBRW на SAT",
+    "teacher1-achievement2": "✓ 1,5+ года опыта",
+    "teacher1-achievement3": "✓ Специальная 2-месячная программа",
 
-    "teacher2-name": "Профессор Майкл Чен",
-    "teacher2-title": "Специалист по английскому языку и письму",
-    "teacher2-description":
-      "Профессор Чен обладает обширными знаниями в области английской литературы и письма. Его инновационные методы преподавания постоянно помогают студентам улучшать навыки понимания прочитанного и написания эссе для SAT.",
-    "teacher2-achievement1": "✓ Выпускник Гарварда",
-    "teacher2-achievement2": "✓ Опубликованный автор",
-    "teacher2-achievement3": "✓ 12+ лет преподавания",
+    "teacher2-name": "Азизбек Алийжонов",
+    "teacher2-title": "Эксперт по SAT Math",
+    "teacher2-description": "Азизбек Алийжонов — будущий студент KAIST (ТОП-30 в мире по машиностроению). Имея идеальный результат 800/800 по SAT Math и многолетний опыт решения олимпиадных задач, он разработал стратегическую программу, включающую фундаментальные модули, практические задания, олимпиадные лайфхаки и анализ ошибок. Программа охватывает все ключевые темы SAT Math и помогает студентам овладеть даже самыми сложными вопросами.",
+    "teacher2-achievement1": "✓ Студент KAIST",
+    "teacher2-achievement2": "✓ 800/800 SAT Math",
+    "teacher2-achievement3": "✓ 3+ года преподавания",
 
-    "teacher3-name": "Доктор Эмили Родригес",
+    "teacher3-name": "Элдор Хамраев",
     "teacher3-title": "Консультант по поступлению в колледж",
-    "teacher3-description":
-      "Доктор Родригес специализируется на поступлении в колледжи и помогла сотням студентов пройти сложный процесс подачи заявок в университеты. Ее опыт распространяется на заявки на стипендии и подготовку к собеседованиям.",
-    "teacher3-achievement1": "✓ Бывший сотрудник приемной комиссии",
+    "teacher3-description": "Элдор Хамраев поступил в Carnegie Mellon University in Qatar с полным грантом $335,000. Он будет главным ментором по поступлению, проводя мастер-классы по построению внеклассных активностей, написанию эссе и поиску своей уникальности в заявке. Элдор — призёр LaunchX и World Scholar's Cup, признан одним из лучших ораторов и учеников Центральной Азии. В Maqsadly он делится всеми стратегиями, которые использовал сам.",
+    "teacher3-achievement1": "✓ Студент CMUQ",
     "teacher3-achievement2": "✓ 500+ успешных заявок",
     "teacher3-achievement3": "✓ Эксперт по стипендиям",
 
-    "teacher4-name": "Джеймс Уилсон",
-    "teacher4-title": "Тренер по стратегии SAT",
-    "teacher4-description":
-      "Джеймс фокусируется на стратегиях сдачи тестов и методах управления временем. Его систематический подход к подготовке к SAT помог студентам максимально раскрыть свой потенциал и достичь значительного улучшения результатов.",
-    "teacher4-achievement1": "✓ Идеальный балл SAT",
-    "teacher4-achievement2": "✓ Специалист по стратегиям",
-    "teacher4-achievement3": "✓ 8+ лет коучинга",
+    "teacher4-name": "Жасурбек Умаров",
+    "teacher4-title": "Поступил в Гарвард и Ментор по Поступлению",
+    "teacher4-description": "Жасурбек Умаров — будущий первокурсник Гарвардского университета (класс 2029), получивший полный грант на обучение на сумму $392,000. В Maqsadly Жасурбек будет вести специальный курс, посвящённый поступлению, где поможет студентам генерировать идеи, структурировать и писать убедительные дополнительные эссе. Имея личный опыт прохождения конкурентного отбора в Лигу Плюща, он научит писать искренние и сильные ответы на самые важные вопросы заявок.",
+    "teacher4-achievement1": "✓ Поступил в Гарвард, класс 2029",
+    "teacher4-achievement2": "✓ Полный грант $392,000",
+    "teacher4-achievement3": "✓ Ментор по поступлению",
+
+    "teacher5-name": "Озодбек Эшбобоев",
+    "teacher5-title": "Поступил в Amherst College и приглашённый спикер",
+    "teacher5-description": "Озодбек Эшбобоев — второй приглашённый спикер, поступил в Amherst College с полным грантом $400,000 (2-й лучший гуманитарный колледж США). Проведя обширные исследования в области образования и государственной политики Узбекистана, Озодбек посвятит свой мастер-класс ... (уточните тему, если нужно) га bag'ishlaydi.",
+    "teacher5-achievement1": "✓ Поступил в Amherst College",
+    "teacher5-achievement2": "✓ Полный грант $400,000",
+    "teacher5-achievement3": "✓ Исследователь образования и политики",
+
+    "teacher6-name": "Хусан Рахимов",
+    "teacher6-title": "Поступил в Duke и стипендиат Karsh",
+    "teacher6-description": "Наш последний спикер — Хусан Рахимов, будущий первокурсник Duke University и обладатель стипендии Karsh International Scholar Program (ежегодно вручается 10-12 студентам по всему миру). Получив более $400,000 в виде гранта, Хусан планирует изучать экономику в Duke. На мастер-классе он расскажет о создании значимых и целенаправленных активностей для поступления.",
+    "teacher6-achievement1": "✓ Поступил в Duke University",
+    "teacher6-achievement2": "✓ Стипендиат Karsh International Scholar",
+    "teacher6-achievement3": "✓ Грант $400,000+",
+
+    "teacher7-name": "Жамшидбек Иззатуллоҳ",
+    "teacher7-title": "Поступил в Vanderbilt и приглашённый спикер",
+    "teacher7-description": "Мы рады приветствовать Жамшидбека Иззатуллоҳ в качестве третьего приглашённого спикера. Недавно поступив в Vanderbilt University (№1 по образованию в США), Жамшидбек получил полный грант $370,000 как международный студент. Пройдя три цикла поступления подряд, он глубоко изучил понятие 'fit factor' — важный, но часто недооценённый аспект заявки. В Maqsadly он проведёт семинар о том, как найти университет, соответствующий вашим ценностям и целям, и как отразить это в заявке.",
+    "teacher7-achievement1": "✓ Поступил в Vanderbilt University",
+    "teacher7-achievement2": "✓ Полный грант $370,000",
+    "teacher7-achievement3": "✓ Ведущий семинара по поступлению",
 
     // Courses Section
     "courses-title": "Выберите свой идеальный курс",
@@ -372,10 +408,11 @@ const translations = {
     "faq-q4": "Какие материалы включены?",
     "faq-a4": "Все учебные материалы, практические тесты и цифровые ресурсы включены в стоимость курса.",
     "faq-q5": "Могу ли я получить возврат средств?",
-    "faq-a5": "Мы предлагаем 30-дневную гарантию возврата денег, если вы не удовлетворены нашей программой.",
-    "faq-q6": "Вы помогаете с поступлением в колледж?",
+    "faq-a5":
+      "Агар сыз бизний дастуримиздан конникмаган болсаз, 30 кунлик pulni qaytarish kafolatini taklif qilamiz.",
+    "faq-q6": "Siz kollejga qabulda yordam berasizmi?",
     "faq-a6":
-      "Наши премиум-курсы включают комплексное руководство по поступлению в колледж и поддержку при подаче заявок.",
+      "Bizning premium kurslarimiz keng qamrovli kollej qabul yo'l-yo'riq va ariza berish yordamini o'z ichiga oladi.",
 
     // Contact Section
     "contact-title": "Свяжитесь с нами",
@@ -396,13 +433,13 @@ const translations = {
     "footer-teachers-link": "Наши преподаватели",
     "footer-success": "Истории успеха",
     "footer-blog": "Блог",
-    "footer-contact-info": "Контактная информация",
-    hours: "Часы работы:",
-    rights: "Все права защищены.",
-    privacy: "Политика конфиденциальности",
-    terms: "Условия использования",
-    support: "Поддержка",
-    sitemap: "Карта сайта",
+    "footer-contact-info": "Aloqa ma'lumotlari",
+    hours: "Ish vaqti:",
+    rights: "Barcha huquqlar himoyalangan.",
+    privacy: "Maxfiylik siyosati",
+    terms: "Foydalanish shartlari",
+    support: "Yordam",
+    sitemap: "Sayt xaritasi",
 
     // Timeline Section
     "timeline1-title": "Начальная Оценка и Планирование",
@@ -513,37 +550,54 @@ const translations = {
 
     // Teachers Section
     "teachers-title": "Bizning ekspert o'qituvchilarimiz bilan tanishing",
-    "teacher1-name": "Doktor Sara Jonson",
-    "teacher1-title": "SAT Matematika Mutaxassisi",
-    "teacher1-description":
-      "SAT tayyorgarligida 15 yildan ortiq tajribaga ega bo'lgan doktor Jonson minglab o'quvchilarga matematika bo'yicha maqsadli ballarga erishishda yordam berdi. U MIT da matematika bo'yicha PhD darajasiga ega va murakkab tushunchalarni oddiy va tushunarli qilishda ixtisoslashgan.",
-    "teacher1-achievement1": "✓ 15+ yillik tajriba",
-    "teacher1-achievement2": "✓ MIT Matematika PhD",
-    "teacher1-achievement3": "✓ 3000+ o'quvchi",
+    "teacher1-name": "Olimjon Uvayzov",
+    "teacher1-title": "SAT English mutaxassisi",
+    "teacher1-description": "Olimjon Uvayzov SAT EBRW bo'yicha 750 ball va 1,5 yillik tajribaga ega. U avgust imtihoniga mo'ljallangan maxsus 2 oylik dastur tuzgan bo'lib, bu dastur talabalarni vaqtni boshqarishdan tortib, ilmiy matnlarni chuqur tahlil qilishgacha o'rgatadi — bu eng murakkab savollarni ham yechishga yordam beradi. Olimjon amaliy va tahliliy darslar o'tkazadi, talabalar uning savollarni qanday yechishini va tahlil qilish usullarini o'rganishadi. Maqsadlyda u har bir talabani shaxsiy rivojlanishini diqqat bilan kuzatadi va maksimal natijaga erishish uchun individual yordam ko'rsatadi.",
+    "teacher1-achievement1": "✓ SAT EBRW 750 ball",
+    "teacher1-achievement2": "✓ 1,5+ yil tajriba",
+    "teacher1-achievement3": "✓ Maxsus 2 oylik dastur",
 
-    "teacher2-name": "Professor Maykl Chen",
-    "teacher2-title": "Ingliz tili va yozish mutaxassisi",
-    "teacher2-description":
-      "Professor Chen ingliz adabiyoti va yozish sohasida boy bilimga ega. Uning innovatsion o'qitish usullari o'quvchilarga SAT uchun o'qishni tushunish va insho yozish ko'nikmalarini yaxshilashda doimiy yordam beradi.",
-    "teacher2-achievement1": "✓ Garvard bitiruvchisi",
-    "teacher2-achievement2": "✓ Nashr etilgan muallif",
-    "teacher2-achievement3": "✓ 12+ yillik o'qituvchilik",
+    "teacher2-name": "Azizbek Alijonov",
+    "teacher2-title": "SAT Math mutaxassisi",
+    "teacher2-description": "Azizbek Alijonov — KAIST talabasi (dunyo bo'yicha TOP-30 muhandislik yo'nalishi). SAT Math bo'yicha 800/800 mukammal natija va yillik olimpiada tajribasiga ega. U natijaga yo'naltirilgan, qatlamli maxsus dastur ishlab chiqqan: asosiy modullar, strategik amaliyotlar, olimpiada usullari va xatolar tahlili. Dastur barcha asosiy SAT Math mavzularini qamrab oladi va eng murakkab savollarni ham o'zlashtirishga yordam beradi.",
+    "teacher2-achievement1": "✓ KAIST talabasi",
+    "teacher2-achievement2": "✓ SAT Math 800/800",
+    "teacher2-achievement3": "✓ 3+ yil tajriba",
 
-    "teacher3-name": "Doktor Emili Rodriges",
+    "teacher3-name": "Eldor Khamrayev",
     "teacher3-title": "Kollejga qabul bo'yicha maslahatchi",
-    "teacher3-description":
-      "Doktor Rodriges kollejga qabul bo'yicha ixtisoslashgan va yuzlab o'quvchilarga universitetlarga arizalar berishning murakkab jarayonida yo'l-yo'riq berdi. Uning tajribasi stipendiyalar uchun arizalar va suhbatlarga tayyorgarlikni o'z ichiga oladi.",
-    "teacher3-achievement1": "✓ Sobiq qabul komissiyasi xodimi",
+    "teacher3-description": "Eldor Khamraev — Carnegie Mellon University in Qatar talabasi, $335,000 to'liq grant sohibi. U asosiy qabul mentori sifatida ariza uchun faoliyatlar, esse yozish va o'z brendini yaratish bo'yicha master-klasslar o'tadi. Eldor LaunchX va World Scholar's Cup g'olibi, Markaziy Osiyoning eng yaxshi notiqlari va o'quvchilaridan biri. Maqsadlyda u o'zi qo'llagan barcha strategiyalarni o'rgatadi.",
+    "teacher3-achievement1": "✓ CMUQ talabasi",
     "teacher3-achievement2": "✓ 500+ muvaffaqiyatli ariza",
-    "teacher3-achievement3": "✓ Stipendiyalar bo'yicha mutaxassis",
+    "teacher3-achievement3": "✓ Stipendiya eksperti",
 
-    "teacher4-name": "Jeyms Uilson",
-    "teacher4-title": "SAT strategiyasi murabbiyi",
-    "teacher4-description":
-      "Jeyms test topshirish strategiyalari va vaqtni boshqarish usullariga e'tibor qaratadi. Uning SAT tayyorgarligiga tizimli yondashuvi o'quvchilarga o'z potensialini maksimal darajada ochish va natijalarni sezilarli darajada yaxshilashga yordam berdi.",
-    "teacher4-achievement1": "✓ Mukammal SAT balli",
-    "teacher4-achievement2": "✓ Strategiya mutaxassisi",
-    "teacher4-achievement3": "✓ 8+ yillik murabbiylik",
+    "teacher4-name": "Jasurbek Umarov",
+    "teacher4-title": "Harvard talabasi va qabul bo'yicha mentor",
+    "teacher4-description": "Jasurbek Umarov — Harvard Universitetining 2029-yil talabalari safida o'qishni boshlaydi va $392,000 to'liq grant sohibi. Maqsadlyda Jasurbek maxsus qabul kursini olib boradi, unda talabalar bilan birga original va kuchli esse yozishni, Ivy League jarayonini muvaffaqiyatli bosib o'tishni o'rgatadi.",
+    "teacher4-achievement1": "✓ Harvard talabasi, 2029-yil",
+    "teacher4-achievement2": "✓ $392,000 to'liq grant",
+    "teacher4-achievement3": "✓ Qabul bo'yicha mentor",
+
+    "teacher5-name": "Ozodbek Eshboboev",
+    "teacher5-title": "Amherst College talabasi va mehmon spiker",
+    "teacher5-description": "Ozodbek Eshboboev — ikkinchi mehmon spiker, Amherst College'ga $400,000 to'liq grant bilan qabul qilingan (AQShda 2-o'rinda turuvchi Liberal Arts College). O'zbekistondagi ta'lim va davlat siyosati bo'yicha keng tadqiqotlar olib borgan Ozodbek o'z darsini ... (aniq mavzuni kiriting) ga bag'ishlaydi.",
+    "teacher5-achievement1": "✓ Amherst College talabasi",
+    "teacher5-achievement2": "✓ $400,000 to'liq grant",
+    "teacher5-achievement3": "✓ Ta'lim va siyosat tadqiqotchisi",
+
+    "teacher6-name": "Khusan Rakhimov",
+    "teacher6-title": "Duke University talabasi va Karsh stipendiyati",
+    "teacher6-description": "So'nggi spikerimiz — Khusan Rakhimov, Duke University'ga qabul qilingan va Karsh International Scholar Program (har yili dunyo bo'ylab 10-12 talabaga beriladi) sohibi. $400,000 dan ortiq grant bilan Khusan Duke'da iqtisodiyot yo'nalishini o'qiydi. Masterklassda u arizaga bog'liq maqsadli va mazmunli faoliyatlarni qurish haqida so'z yuritadi.",
+    "teacher6-achievement1": "✓ Duke University talabasi",
+    "teacher6-achievement2": "✓ Karsh International Scholar stipendiyati",
+    "teacher6-achievement3": "✓ $400,000+ grant",
+
+    "teacher7-name": "Jamshidbek Izzatulloh",
+    "teacher7-title": "Vanderbilt University talabasi va mehmon spiker",
+    "teacher7-description": "Jamshidbek Izzatulloh — uchinchi mehmon spikerimiz. Yaqinda AQShda ta'lim bo'yicha 1-o'rinda turuvchi Vanderbilt University'ga $370,000 to'liq grant bilan qabul qilindi. U ketma-ket uchta qabul siklidan o'tib, 'fit factor' — universitet va talaba qadriyatlari, maqsadlari mosligi — haqida chuqur bilimga ega bo'ldi. Maqsadlyda Jamshidbek talabalar o'z qadriyat va maqsadlariga mos universitetlarni qanday topish va arizada qanday aks ettirish bo'yicha seminar o'tadi.",
+    "teacher7-achievement1": "✓ Vanderbilt University talabasi",
+    "teacher7-achievement2": "✓ $370,000 to'liq grant",
+    "teacher7-achievement3": "✓ Qabul seminar yetakchisi",
 
     // Courses Section
     "courses-title": "O'zingizga mos kursni tanlang",

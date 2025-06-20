@@ -3,7 +3,7 @@
   .msger {
     
     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    --bg-secondary: linear-gradient(135deg, rgb(245, 247, 250) 0%, rgb(195, 207, 226) 100%);;
+    --bg-secondary: linear-gradient(135deg, rgb(245, 247, 250) 0%, rgb(195, 207, 226) 100%);
     --msger-bg: #f8f9fa;
     --border: 2px solid #ddd;
     --left-msg-bg: white;
