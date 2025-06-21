@@ -1,10 +1,12 @@
 
 /* Blue + Purple */
 :root {
-  --primary-color: #072c50;
+  /* --primary-color: #072c50; */
+  --primary-color: black;
   --secondary-color: #b88746;
   --accent-color: #fdf5a6;
-  --text-color: #072c50;
+  /* --text-color: #072c50; */
+  --text-color: black;
   --text-light: #6b7280;
   --bg-color: #fff;
   --bg-secondary: #f5f8fa;
@@ -15,8 +17,10 @@
 [data-theme="dark"] {
   --text-color: #fff;
   --text-light: #b88746;
-  --bg-color: #072c50;
-  --bg-secondary: #0b1e3c;
+  /* --bg-color: #072c50;
+  --bg-secondary: #0b1e3c; */
+  --bg-color: black;
+  --bg-secondary: black;
   --border-color: #b88746;
   --shadow: 0 4px 6px -1px rgba(189, 135, 70, 0.2);
   --shadow-lg: 0 10px 15px -3px rgba(189, 135, 70, 0.25);
