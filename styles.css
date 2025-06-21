@@ -5,12 +5,12 @@
   --primary-color: black;
   --secondary-color: #b88746;
   --accent-color: #fdf5a6;
-  /* --text-color: #072c50; */
   --text-color: black;
   --text-light: #6b7280;
   --bg-color: #fff;
   --bg-secondary: #f5f8fa;
   --border-color: #cbd5e1;
+  --card-background:#2a2a2a;
   --shadow: 0 4px 6px -1px rgba(7, 44, 80, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(7, 44, 80, 0.15);
 }
@@ -540,8 +540,8 @@ body {
 
 .about-text {
   /* Remove opacity/transform/animation for animation.css system */
-  opacity: 1 !important;
-  visibility: visible !important;
+  /* opacity: 1 !important; */
+  /* visibility: visible !important; */
 }
 
 .about-text p {
@@ -551,7 +551,7 @@ body {
 }
 
 .about-form {
-  background: var(--bg-secondary);
+  background: var(--bg-secondary); 
   padding: 2rem;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -564,6 +564,10 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--text-color);
+}
+.about-text h3,
+.about-text ul {
+  color: var(--primary-color)!important;
 }
 
 .about-form input {
@@ -780,6 +784,11 @@ body {
   background: linear-gradient(135deg, var(--accent-color), #f59e0b);
 }
 
+[data-theme="dark"] .badge.black {
+  border-style: solid;
+  border-color: var(--secondary-color);
+}
+
 .course-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -859,6 +868,9 @@ body {
 .faq-item {
   background: var(--bg-color);
   border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--secondary-color);
   margin-bottom: 1rem;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -879,7 +891,9 @@ body {
 .faq-question:hover {
   background: var(--bg-secondary);
 }
-
+[data-theme="dark"] .faq-icon{
+  color: var(--secondary-color);
+}
 .faq-icon {
   font-size: 1.5rem;
   color: var(--primary-color);
@@ -1026,7 +1040,6 @@ body {
 .contact-form button {
   background: var(--primary-color);
   color: white;
-  border: none;
   padding: 1rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -1480,7 +1493,9 @@ body {
   border-color: #b88746 !important;
   outline-color: #b88746 !important;
 }
-
+[data-theme="dark"] .about-form{
+  background-color: var(--card-background);
+}
 /* === DARK MODE OVERRIDES (place at end for specificity) === */
 [data-theme="dark"] {
   --text-color: #fff;
